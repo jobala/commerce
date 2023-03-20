@@ -1,23 +1,24 @@
 {
-  "name": "commerce",
-  "license": "MIT",
   "private": true,
-  "scripts": {
-    "build": "turbo run build --filter=next-commerce...",
-    "dev": "turbo run dev",
-    "start": "turbo run start",
-    "types": "turbo run types",
-    "prettier-fix": "prettier --write ."
+  "workspaces": {
+    "packages": [
+      "api",
+      "web"
+    ]
   },
   "devDependencies": {
-    "husky": "^8.0.1",
-    "prettier": "^2.7.1",
-    "turbo": "^1.4.6"
+    "@redwoodjs/core": "4.3.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "turbo run lint"
-    }
+  "eslintConfig": {
+    "extends": "@redwoodjs/eslint-config",
+    "root": true
   },
-  "packageManager": "pnpm@7.5.0"
+  "engines": {
+    "node": ">=16.19 <=18.x",
+    "yarn": ">=1.15"
+  },
+  "prisma": {
+    "seed": "yarn rw exec seed"
+  },
+  "packageManager": "yarn@3.4.1"
 }
