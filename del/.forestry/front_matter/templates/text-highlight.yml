@@ -1,0 +1,43 @@
+---
+label: Hero section with only text
+hide_body: true
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: case-study
+- name: name
+  label: Name
+  hidden: false
+  type: text
+- name: company
+  label: Company
+  hidden: false
+  type: text
+- name: highlight
+  label: Title
+  hidden: false
+  type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- name: subtitle
+  label: SubTitle
+  hidden: false
+  type: textarea
+- name: paragraph
+  label: Description
+  hidden: false
+  type: textarea
+- name: class
+  label: Class
+  hidden: false
+  type: text
+- name: image
+  label: Image
+  description: inside the template there is support for Image. Intended to be similar
+    to Hero with Background. (Use with Caution)
+  hidden: false
+  type: file

@@ -1,0 +1,33 @@
+.m-video {
+
+	&:extend(.g-m-hide all);
+
+	&__overlay {
+
+		&:extend(.g-overlay all);
+	}
+
+	&__box {
+		@w: (@w_full-col * 6) + @m-col;
+
+		overflow: hidden;
+
+		width: (@w_full-col * 6) + @m-col;
+
+		border-radius: 20px;
+
+		background-color: @white;
+		box-shadow: 0 0 8px fadeout(@black, 80%);
+
+		._mx_md-mobile({
+			width: 100%;
+			border-radius: 0;
+		});
+
+		iframe {
+			display: block;
+			width: 100%;
+			height: floor(@w / 16 * 9);
+		}
+	}
+}

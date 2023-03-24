@@ -1,0 +1,96 @@
+<!-- jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<!-- Polyfills -->
+<script type="text/javascript">
+  if(/.*Trident.+/.test(navigator.userAgent)){ // IE11 polyfills
+    document.write("\<script type=\"text\/javascript\" src=\"\/static\/js\/vendor\/core-js.min.js\"\>\<\/script\>");
+    document.write("\<script type=\"text\/javascript\" src=\"\/static\/js\/vendor\/runtime.js\"\>\<\/script\>");
+    document.write("\<script type=\"text\/javascript\" src=\"\/static\/js\/vendor\/template.js\"\>\<\/script\>");
+    document.write("\<script type=\"text\/javascript\" src=\"\/static\/js\/vendor\/prepend.js\"\>\<\/script\>");
+    document.write("\<script type=\"text\/javascript\" src=\"\/static\/js\/vendor\/remove.js\"\>\<\/script\>");
+  }
+</script>
+
+<!-- Materialize -->
+<link rel="stylesheet" id="materialized" href="{{ site.baseurl | append: '/static/redesign/materialize/css/materialize.min.css' | replace: '//', '/' | replace: ':/', '://' }}" type="text/css" media="all" />
+<script type="text/javascript" src="{{ site.baseurl | append: '/static/redesign/materialize/js/materialize.min.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+
+<!-- BRAND FONTS & ICONS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+    /* latin-ext */
+@font-face {
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
+<!-- end of BRAND FONTS & ICONS -->
+
+<!-- Redesign style -->
+<link rel="stylesheet" id="style-book" href="{{ site.baseurl | append: '/static/redesign/style-book.css' | replace: '//', '/' | replace: ':/', '://' }}" type="text/css" media="all" />
+
+<!-- Custom -->
+<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom-base.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dooinopjfnhlmmdkdepajfipfhlcmjgp">
+
+<!-- Swiper -->
+<script src="/dist/js/plugin/swiper.jquery.min.js"></script>
+
+<!-- GrowSumo -->
+<script type='text/javascript'>(function() {var gs = document.createElement('script');gs.src = 'https://snippet.growsumo.com/growsumo.min.js';gs.type = 'text/javascript';gs.async = 'true';gs.onload = gs.onreadystatechange = function() {var rs = this.readyState;if (rs && rs != 'complete' && rs != 'loaded') return;try {growsumo._initialize('pk_Q7s39I1COQIhEfbdCITeDSqgsdjyWlHe');if (typeof(growsumoInit) === 'function') {growsumoInit();}} catch (e) {}};var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gs, s);})();</script>
+
+<!-- dod clone for modal window -->
+<link rel="stylesheet" href="{{ site.baseurl | append: '/static/css/dod.css' | replace: '//', '/' | replace: ':/', '://' }}" type="text/css" media="all" />

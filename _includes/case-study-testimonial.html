@@ -1,0 +1,30 @@
+<div class="col s12 m8 offset-m2">
+    {% if include.title %}<div class="text-center"><{{ include.heading_tag | default: "h2" }}><strong>{{ include.title }}</strong></{{ include.heading_tag | default: "h2" }}></div>{% endif %}
+
+    <div class="row section shadow-container py-3">
+      {% assign img_src = include.image | strip %}
+      {% if include.image and img_src != "" %}
+      <div class="col s12 m12 l3 {{include.flex}} {{include.center}}">
+        <div class="testimonial-person">
+          <img class="rounding yellow-border" src="{{include.image}}" alt="{{include.image_alt}}" {% if include.image_max_width %}style="max-width: {{include.image_max_width}};"{% endif %}>
+        </div>
+      </div>
+      {% endif %}
+      <div class="col s12 m12 {% if include.image and img_src != '' %}l9{% else %}l10 offset-l1{% endif %}">
+        <div class="quote-bg yellow-mark line-height-2X">
+          <h5><strong>{{ include.subtitle }}</strong></h5>
+          {{ include.content | markdownify }}
+          <strong>{{ include.quote_author }}</strong>
+        </div>
+      </div>
+    </div>
+
+    {% assign button_text = include.button | strip %}
+
+    {% if button_text != "" %}
+    <div class="buttonblock">
+      <a href="https://meeting.is/ss/showu/demo/default#crankwheel-com-showu-launch-button" class="btn-large primary">{{include.button }}</a>
+    </div>
+    {% endif %}
+
+  </div>

@@ -1,0 +1,26 @@
+<html>
+<head>
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+	<script>
+$(document).ready(function () {
+	window.addEventListener('message', function (event) {
+		console.log(event);
+		if (event.data && event.data.type && event.data.type == 'cw-iframe-api') {
+			if (event.data.event == 'showalert') {
+				alert(event.data.message);
+			}
+		}
+	});
+
+	if (window.parent) {
+		window.parent.postMessage({'type': 'cw-iframe-api', 'event': 'onload'}, '*');
+	}
+});
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head-tags.html %}
+    <!-- Meta information: title, description, opengraph, twittercard -->
+    {% include redesign-meta.html %}
+    {% include head-src.html %}
+
+    <!-- Head assets: css, js, fonts -->
+    {% include redesign-head.html %}
+    {% include simple-head.html %}
+  </head>
+  <body>
+    <div>
+      {% include redesign-header.html %}
+
+      {% assign hero = page.hero | first %}
+      {% assign template = hero.template %}
+      {% case template %}
+      {% when 'background-hero' %}
+        {% include case-study-background-hero.html company=hero.company title=hero.title summary=hero.summary description=hero.description dim=hero.dim css=hero.css image=hero.image %}
+      {% when 'text-highlight' %}
+        {% include case-study-text-highlight.html company=hero.company title=hero.highlight class=hero.class image=hero.image %}
+      {% when 'two-column-highlight' %}
+        {% include two-column-highlight.html background_color=hero.hero_background_color company=hero.company title=hero.hero_title subtitle=hero.subtitle highlight_description=hero.hero_description image=hero.hero_image button_text=hero.button_text button_url=hero.button_url %}
+      {% endcase %}
+
+      
+      {% for section in page.sections %}
+      {% assign img_src = section.image | strip %}
+      <div class="{% if section.background_color == 'grey' %}light-grey-bcg{% else %}{% endif %} section">
+        <div class="{% if section.container_type == 'fluid' %}container-fluid{% elsif section.testimonial and section.image and img_src != '' %}container-fluid{% else %}container{% endif %}">
+            <div class="row">
+              {% assign template = section.template %}
+              {% case template %}
+              {% when 'one-column' %}
+                {% include case-study-simple.html name=section.name title=section.title background_color=section.background_color container_type=section.container_type content=section.content image=section.image image_alt=section.image_alt flex=section.flex center=section.center button=section.button heading_tag=section.heading_tag %}
+              {% when 'testimonial-column' %}
+                {% include case-study-testimonial.html name=section.name title=section.title background_color=section.background_color container_type=section.container_type content=section.content image=section.image image_alt=section.image_alt flex=section.flex center=section.center button=section.button subtitle=section.subtitle quote_author=section.quote_author heading_tag=section.heading_tag %}
+              {% when 'two-columns' %}
+                {% include case-study-two-columns.html name=section.name title=section.title background_color=section.background_color container_type=section.container_type column1=section.column1 column2=section.column2 %}
+              {% when 'three-columns' %}
+                {% include case-study-three-columns.html name=section.name title=section.title background_color=section.background_color container_type=section.container_type column1=section.column1 column2=section.column2 column3=section.column3 %}
+              {% endcase %}
+
+            </div>
+        </div>
+    </div>
+      {% endfor %}
+
+      {{ content }}
+      
+      {% include redesign-footer.html %}
+    </div>
+  {% include body-tags.html %}
+  </body>
+</html>

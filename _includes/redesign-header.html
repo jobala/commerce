@@ -1,0 +1,63 @@
+<div class="menu">
+    <a href="/" class="menu-logo">
+        <img alt="Home" src="/static/redesign/img/crankwheel_logo.png"/>
+    </a>
+    <span class="menu-toggle material-icons">menu</span>
+    <span class="menu-toggle material-icons hide">close</span>
+    <ul class="main-menu">
+		<li><a class="menu-link" href="/features/">Features</a>
+            <ul class="sub-menu browser-default">
+                {% assign ordered = site.feature_page | sort: 'order' %}
+                {% for feature_page in ordered %}
+                {% if feature_page.order %}
+                <li><a class="menu-link" href="{{feature_page.url}}">{{feature_page.menu_label | default: feature_page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% for feature_page in site.feature_page %}
+                {% unless feature_page.order %}
+                <li><a class="menu-link" href="{{feature_page.url}}">{{feature_page.menu_label | default: feature_page.title}}</a></li>
+                {% endunless %}
+                {% endfor %}
+                <li><a class="menu-link" href="/api/">Embed & Integrate</a></li>
+            </ul>
+        </li>
+        <li><a class="menu-link" href="/pricing/">Pricing</a></li>
+        <li><a class="menu-link" href="/case-studies/">Case studies</a>
+			<ul class="sub-menu browser-default">
+                {% for case in site.case_studies %}
+                {% if case.top_menu %}
+                <li><a class="menu-link" href="{{case.url}}">{{case.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+			</ul>
+         </li>
+        <li><a class="menu-link" href="/industries/">Industries</a>
+			<ul class="sub-menu browser-default">
+                {% for industry in site.industry_page %}
+                <li><a class="menu-link" href="{{industry.url}}">{{industry.menu_label}}</a></li>
+                {% endfor %}
+			</ul>
+        </li>
+		<li><span class="menu-item">Resources</span>
+			<ul class="sub-menu browser-default">
+                <li><a class="menu-link" href="/blog/">Blog</a></li>
+                <li><a class="menu-link" href="/screen-sharing-guide/">The Ultimate Guide to Screen Sharing</a></li>
+                <li><a class="menu-link" href="/screen-share-troubleshooting/">Troubleshooting - FAQ</a></li>
+                <li><a class="menu-link" href="/getting-started-screen-sharing-basics/">Getting started</a></li>
+				<li><a class="menu-link" href="/sign-up-to-download/">Downloadable book</a></li>
+			</ul>
+        </li>
+        <li><a class="menu-link" href="https://meeting.is/ss">Log in</a></li>
+    </ul>
+    <div class="auth-menu">
+        <a class="btn btn-regular" data-schedule-demo>Get a demo</a>
+        <a class="btn btn-regular primary" href="https://meeting.is/ss/signup#email/" onclick="return doSignupLink();">Sign up</a>    
+    </div>
+</div>
+
+<script>
+ $('.menu-toggle').on('click tap', (e) => {
+     $('.menu-toggle').toggleClass('hide');
+     $('.menu').toggleClass('mobile-view');
+ });
+</script>

@@ -1,0 +1,50 @@
+---
+label: Hero section with Background
+hide_body: true
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: case-study
+- name: name
+  label: Name
+  hidden: false
+  type: text
+- name: company
+  label: Company
+  hidden: false
+  type: text
+- name: title
+  label: Title
+  hidden: false
+  type: textarea
+- name: summary
+  label: Summary
+  hidden: false
+  type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
+- name: description
+  label: Description
+  hidden: false
+  type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: boolean
+  name: dim
+  label: Dim
+  description: The background image will be added another layer to dim the image
+  default: true
+- name: image
+  label: Image
+  hidden: false
+  type: file
+- name: css
+  label: CSS
+  hidden: false
+  type: textarea

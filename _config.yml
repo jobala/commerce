@@ -1,0 +1,52 @@
+# GENERAL SETTINGS
+lang: "en-US"
+title: "CrankWheel"
+email: info@crankwheel.com
+author:
+  name: "CrankWheel"
+  avatar: "/static/images/authors/crankwheel.png"
+  link: "https://crankwheel.com"
+description: "CrankWheel: Simple screen sharing for sales teams"
+thumbnail: "/static/images/default_thumbnail.png"
+
+# URL SETTINGS
+# the subpath of your site
+baseurl: ""
+# the base hostname & protocol for your site
+url: "https://crankwheel.com"
+
+# Social services
+twitter_user: "crankwheel"
+twitter_link: "https://twitter.com/crankwheel"
+facebook_link: "https://www.facebook.com/crankwheel"
+linkedin_link: "https://www.linkedin.com/company/crankwheel"
+
+disqus_code: "crankwheel"
+
+collections:
+  case_studies:
+    permalink: /:path-case-study/
+    output: true
+  industry_page:
+    permalink: /industries/:slug/
+    output: true
+  hero_sections:
+    output: false
+  feature_descriptions:
+    output: false
+  feature_page:
+    permalink: /:slug/
+    output: true
+
+# BUILD SETTINGS
+markdown: kramdown
+kramdown:
+  auto_ids: false
+permalink: /:title/
+exclude: ["README.md", "_app", "tools"]
+
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from

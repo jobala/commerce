@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: CrankWheel/crankwheel.github.io
+  branch: master
+publish_mode: editorial_workflow
+site_domain: crankwheel.com
+site_url: https://crankwheel.com
+logo_url: /media/img/picard.jpeg
+media_folder: "static/images"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string", default: "CrankWheel"}
+      - {label: "Comments", name: "comments", widget: "boolean", default: true}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Pinned (normally -1)", name: "pinned", widget: "number", value_type: "int", default: -1}
+      - {label: "Order (normally -1)", name: "order", widget: "number", value_type: "int", default: -1}
+      - {label: "Menu label (normally empty)", name: "menu_label", widget: "hidden", default: ""}
+      - {label: "Category (normally empty)", name: "category", widget: "hidden", default: []}
+      - {label: "Body", name: "body", widget: "markdown"}

@@ -1,0 +1,36 @@
+<div class="window-frame" style="{{include.style}}">
+    <div class="window-panel">
+        <div class="window-button"></div>
+        <div class="window-button"></div>
+        <div class="window-button"></div>
+    </div>
+    <div class="window-content zero-spacing">
+        <img class="zero-spacing" src="{{include.image}}">
+    </div>
+    {% if include.background_right %}
+        {% if include.background_right == 1 %}
+        <!-- <img class="image-background right" src="{{site.baseurl | append: '/static/images/simple/lines5.svg' | replace: '//', '/' | replace: ':/', '://'}}"> -->
+        <div class="image-background right">
+            {% include lines5.svg %}
+        </div>
+        {% else %}
+        <!-- <img class="image-background right" src="{{site.baseurl | append: '/static/images/simple/lines1.svg' | replace: '//', '/' | replace: ':/', '://'}}"> -->
+        <div class="image-background right">
+            {% include lines2.svg %}
+        </div>
+        {% endif %}
+    {% endif %}
+    {% if include.background_left %}
+        {% if include.background_left == 1 %}
+        <!-- <img class="image-background left" src="{{site.baseurl | append: '/static/images/simple/lines6.svg' | replace: '//', '/' | replace: ':/', '://'}}"> -->
+        <div class="image-background left">
+            {% include lines6.svg %}
+        </div>
+        {% else %}
+        <!-- <img class="image-background left" src="{{site.baseurl | append: '/static/images/simple/lines2.svg' | replace: '//', '/' | replace: ':/', '://'}}"> -->
+        <div class="image-background left">
+            {% include lines1.svg %}
+        </div>
+        {% endif %}
+    {% endif %}
+</div>

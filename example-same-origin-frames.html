@@ -1,0 +1,20 @@
+---
+layout: raw
+title: "Example video"
+description: "Example video for showing in-session video feature."
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ page.html_class }}">
+	<head>
+		{% include head-tags.html %}
+	</head>
+	<body id="top" class="{{ page.body_class }}">
+		<input type="button" value="Click me" name="Click me"><br/>
+		<textarea>write here...</textarea><br/>
+		Below is an iframe of this same page, try using it in remote control (it's normal for the nested iframe to be blank):<br/>
+		<iframe src="/example-same-origin-frames/"></iframe><br/>
+		And another iframe!<br/>
+		<iframe src="/example-same-origin-frames/"></iframe><br/>
+  {% include body-tags.html %}
+	</body>
+</html>

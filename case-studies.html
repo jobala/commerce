@@ -1,0 +1,41 @@
+---
+layout: simple
+permalink: "/case-studies/"
+title: Screen Sharing Case Studies
+published: false
+description: Screen Sharing for sales teams case studies. See how our customers in insurance, solar, mortgage and digital marketing close more remote sales.
+---
+<style>
+    .case-studies .case-study {
+        margin-bottom:50px;
+    }
+</style>
+<div class="white-bcg">
+    <div class='row white-bcg'>
+      <div class="col l6 push-l3 s12">
+        <main class="blog-content case-studies" role="main">
+            <h1>Screen Sharing Case Studies</h1>
+          {% for case in site.case_studies %}
+          <article class="case-study">
+        <div class="entry-content-wrapper clearfix standard-content">
+          <header class="entry-content-header">
+            <h2 class="post-title entry-title" >
+              <a href="{{ site.baseurl | append: case.url | replace: '//', '/' | replace: ':/', '://' }}" rel="bookmark" title="{{ case.title }}">{{ case.title }}<span class="post-format-icon minor-meta"></span></a>
+            </h2>
+            <span class="post-meta-infos">
+            </span>
+          </header>
+          <div class="entry-content" >
+            {{case.description}}
+            <br>
+            <a class="read-more" href="{{ site.baseurl | append: case.url | replace: '//', '/' | replace: ':/', '://' }}" rel="bookmark" title="{{ case.title }}">Read More &#8594;</a>
+          </div>
+        </div>
+          </article>
+          {% endfor %}
+          <!--end content-->
+        </main>
+      </div>
+      <!--end container-->
+    </div>
+  </div>

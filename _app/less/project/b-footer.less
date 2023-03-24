@@ -1,0 +1,27 @@
+.b-footer {
+	height: @h-b-footer;
+	background-color: @bg-b-footer;
+
+	&__nav {
+
+		> ul {
+			text-align: right;
+
+			._mx_md-mobile({
+				text-align: center;
+			});
+
+			._mx_inline(~'li');
+
+			> li {
+				color: @gray-light;
+				font-size: @font-size-small;
+				line-height: @h-b-footer;
+
+				+ li {
+					margin-left: @m-col;
+				}
+			}
+		}
+	}
+}

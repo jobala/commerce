@@ -1,0 +1,441 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: true
+  default: post
+  config:
+    required: true
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: 'TODO: Enter Title Here'
+  config:
+    required: true
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: 'TODO: Add a description here'
+  config:
+    required: true
+    max: 190
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: Now
+  config:
+    required: true
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- type: file
+  label: Thumbnail
+  name: thumbnail
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: CrankWheel
+  config:
+    required: true
+- name: pinned
+  label: Pinned
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear pinned an overview page. -1 will
+    show it as normal content.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: order
+  label: Order
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear along the sorted content in the
+    overview page. -1 will show it as usual.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: menu_label
+  label: Menu Label
+  description: text used for labeling the menu items and as titles for the tiles in
+    overview pages
+  type: text
+  hidden: false
+- name: comments
+  label: Comments
+  type: boolean
+  hidden: false
+  default: true
+pages:
+- _posts/2015-05-26-website-launched.md
+- _posts/2015-06-10-its-a-kind-of-funding.md
+- _posts/2015-11-16-public-launch-pricing-plans-and-slush.md
+- _posts/2016-01-25-rotary-phone-sorry-dont-want-your-business.md
+- _posts/2016-04-18-do-one-thing-well.md
+- _posts/2016-04-25-four-ways-instant-screen-sharing-helps-sales.md
+- _posts/2016-09-20-first-banking-customer.md
+- _posts/2016-10-31-Are-you-screen-sharing-yet.md
+- _posts/2016-11-08-Screen-sharing-meets-telesales.md
+- _posts/2016-11-14-Deloitte-fast-50-Rising-Star-CrankWheel.md
+- _posts/2016-11-21-interview-with-vodafone-startup-success-in-the-land-of-ice-and-fire.md
+- _posts/2016-11-23-meet-us-at-slush.md
+- _posts/2016-12-12-your-sales-consultants-need-reliable-screen-sharing-now.md
+- _posts/2016-12-15-do-sales-professionals-really-need-screen-sharing.md
+- _posts/2017-01-31-the-perfect-sales-conversation.md
+- _posts/2017-02-14-our-map-of-Dublin-Tech-Summit.md
+- _posts/2017-02-28-crankwheel-and-conferencecall-a-partnership-to-increase-conversions-22x.md
+- _posts/2017-03-06-From-2000-to-10000-installations-a-startup-survival-guide.md
+- _posts/2017-03-16-how-to-massively-increase-the-chance-of-qualifying-sales-leads.md
+- _posts/2017-04-06-introduction-to-software-sales.md
+- _posts/2017-04-18-making-sense-and-making-more-money-from-software-pricing-models.md
+- _posts/2017-05-09-how-to-generate-more-revenue.md
+- _posts/2017-06-06-how-to-increase-software-sales-conversion-rates-free-trial-vs-demo.md
+- _posts/2017-06-12-external-consultants.md
+- _posts/2017-06-13-online-or-on-site-sales-presentation-whats-best.md
+- _posts/2017-06-20-increase-sales-with-a-free-trial.md
+- _posts/2017-06-28-winning-more-clients-with-demos.md
+- _posts/2017-08-01-how-to-tell-if-you-need-more-sales-executives.md
+- _posts/2017-08-07-software-sales-demos-vs-slides.md
+- _posts/2017-08-23-what-to-look-for-in-software-sales-person.md
+- _posts/2017-08-29-sales-leaders-why-pipeline-management-doesnt-work.md
+- _posts/2017-09-27-six-bad-sales-practices-that-can-be-improved.md
+- _posts/2017-10-12-set-up-an-instant-demo-sales-pipeline-today.md
+- _posts/2017-10-19-Facebook-launches-screen-sharing.md
+- _posts/2017-11-07-how-to-focus-on-the-right-prospects.md
+- _posts/2017-11-14-how-to-avoid-wasting-a-sales-training-budget.md
+- _posts/2017-11-27-how-to-build-a-highly-converting-website-with-artificial-intelligence.md
+- _posts/2017-12-13-crankwheel-plus-talkdesk.md
+- _posts/2017-12-21-software-pricing-strategies.md
+- _posts/2018-01-04-buyer-personas.md
+- _posts/2018-01-11-sell-whats-on-the-truck.md
+- _posts/2018-01-18-tools-for-chromeos-chromebook-screen-sharing.md
+- _posts/2018-02-07-lead-generation-5-outstanding-ideas-to-try.md
+- _posts/2018-02-08-crankwheel-plus-talkdesk-webinar.md
+- _posts/2018-02-15-saas-discounting-when-and-how-to-offer-reduced-pricing.md
+- _posts/2018-03-01-why-b2b-sales-still-has-a-crucial-digital-gap-and-how-to-fix-it.md
+- _posts/2018-03-15-how-to-ensure-your-team-is-focusing-on-the-right-prospects.md
+- _posts/2018-03-29-gdpr-what-it-is-and-what-it-means-for-your-marketing-team.md
+- _posts/2018-04-05-the-difference-a-team-makes.md
+- _posts/2018-04-12-why-creating-a-non-ideal-customer-profile-will-benefit-your-business.md
+- _posts/2018-04-26-5-reasons-your-businesses-should-launch-an-outbound-sales-campaign.md
+- _posts/2018-04-26-using-product-demos-in-your-sales-pipeline-lessons-learned.md
+- _posts/2018-05-10-how-to-use-business-networking-to-grow-your-sales-pipeline.md
+- _posts/2018-05-17-how-to-qualify-opportunities-with-online-meetings.md
+- _posts/2018-05-24-11-key-stats-that-you-need-to-know-as-a-sales-leader.md
+- _posts/2018-06-01-30-cold-calling-tips-and-techniques-according-to-experts.md
+- _posts/2018-06-07-how-b2b-sales-is-evolving-and-what-this-means-for-your-team.md
+- _posts/2018-06-21-6-ways-to-improve-sales-performance-when-time-is-running-out.md
+- _posts/2018-06-24-google-analytics-integration.md
+- _posts/2018-07-12-what-should-you-do-when-a-customer-asks-about-a-discount.md
+- _posts/2018-08-01-received-an-out-of-office-keep-your-summer-sales-pipeline-moving.md
+- _posts/2018-08-15-should-salespeople-ever-text-sales-prospects.md
+- _posts/2018-08-29-how-to-use-product-demos-during-a-cold-sales-call.md
+- _posts/2018-09-13-5-ways-to-turn-telesales-calls-into-consultative-selling-conversations.md
+- _posts/2018-09-19-6-ways-to-create-urgency-when-your-pricing-model-is-freemium.md
+- _posts/2018-09-26-Improve-telesales-conversion-rates-with-screen-sharing-.md
+- _posts/2018-10-02-startups-with-series-a-funding-what-should-we-look-for-in-salespeople.md
+- _posts/2018-10-10-engaging-disengaged-buyers-how-to-maintain-interest-effortlessly.md
+- _posts/2018-10-17-entering-a-new-market-checklist-how-to-get-ready.md
+- _posts/2018-10-23-how-to-build-a-referral-network-from-scratch.md
+- _posts/2018-10-31-selling-a-complex-product-how-to-make-the-sales-process-easier.md
+- _posts/2018-11-07-screen-sharing-101-introduce-screen-sharing-and-jump-on-live-calls-quicker.md
+- _posts/2018-11-13-how-to-qualify-leads-when-selling-to-small-businesses.md
+- _posts/2018-11-20-how-to-get-buy-in-when-selling-to-small-and-medium-businesses.md
+- _posts/2018-11-27-take-action-today-to-improve-your-2019-pipeline.md
+- _posts/2018-12-05-need-to-hit-your-year-end-target-generate-more-leads-with-telesales.md
+- _posts/2018-12-12-3-ways-to-keep-prospects-engaged-using-low-touch-contact-methods.md
+- _posts/2018-12-18-how-to-start-a-sales-call-the-right-way.md
+- _posts/2019-01-02-introducing-new-product-features-should-sales-leads-get-a-vote.md
+- _posts/2019-01-09-increase-conversions-when-you-improve-telesales-qualification.md
+- _posts/2019-01-16-introducing-crankwheel-remote-control.md
+- _posts/2019-01-23-how-to-hit-your-2019-target.md
+- _posts/2019-01-30-make-it-easier-to-identify-and-act-on-sales-opportunities.md
+- _posts/2019-02-06-screen-sharing-for-inside-sales-agents-convert-calls-quicker.md
+- _posts/2019-02-13-crankwheel-remote-control-benefits-to-customer-service-inside-sales-teams.md
+- _posts/2019-02-20-four-ways-to-quickly-build-trust-after-a-cold-call.md
+- _posts/2019-02-27-need-more-sales-meetings-in-the-pipeline-4-ways-to-fill-up-your-calendar.md
+- _posts/2019-03-06-customer-complaints-how-to-account-manage-from-problems-to-increased-spend.md
+- _posts/2019-03-13-six-ways-to-generate-more-revenue-from-strategic-account-management.md
+- _posts/2019-03-20-how-to-screen-share-your-way-to-sales-success.md
+- _posts/2019-03-27-why-purchase-segmentation-is-the-key-to-revenue-growth.md
+- _posts/2019-04-03-4-ways-to-get-over-phone-phobia-in-sales.md
+- _posts/2019-04-10-3-ways-to-automatically-build-referrals-and-reviews-into-the-sales-pipeline.md
+- _posts/2019-04-17-how-to-maintain-fast-growth-in-a-low-growth-economy.md
+- _posts/2019-04-24-use-linkedin-sales-navigator-online-demos-shorten-your-sales-cycle.md
+- _posts/2019-05-01-are-you-using-sales-enablement-material-to-scale-more-quickly.md
+- _posts/2019-05-08-how-ceos-can-recruit-the-right-sales-talent-to-succeed.md
+- _posts/2019-05-15-how-to-leverage-emerging-best-practices-to-hit-your-number.md
+- _posts/2019-05-22-how-to-close-5-techniques-you-should-know.md
+- _posts/2019-05-29-17-questions-to-ask-during-the-qualifying-process.md
+- _posts/2019-06-05-five-essential-skills-every-sales-rep-needs-to-know-in-2019.md
+- _posts/2019-06-12-how-to-deliver-the-perfect-instant-online-product-demo.md
+- _posts/2019-06-19-mobile-marketing-in-sales-4-essential-tactics.md
+- _posts/2019-06-26-9-sales-books-well-worth-reading-during-summer.md
+- _posts/2019-07-03-5-elements-of-an-effective-consultative-sales-process.md
+- _posts/2019-07-10-sales-over-messaging-apps-the-lowest-hanging-fruit.md
+- _posts/2019-07-17-start-with-a-sales-audit-before-expanding-your-sales-team.md
+- _posts/2019-07-24-what-should-the-perfect-sales-pitch-include.md
+- _posts/2019-07-31-how-to-follow-up-more-effectively-7-easy-ways.md
+- _posts/2019-08-07-how-to-simplify-and-amplify-your-companys-sales-message.md
+- _posts/2019-08-14-4-simple-tactics-to-book-more-demos-next-month.md
+- _posts/2019-08-21-how-to-navigate-the-dynamics-of-multiple-decision-makers.md
+- _posts/2019-08-28-what-sales-teams-need-in-their-sales-tech-stack.md
+- _posts/2019-09-04-reboot-your-sales-pipeline-and-recover-from-the-summer-slowdown.md
+- _posts/2019-09-11-how-to-get-around-linkedin-s-commercial-use-limits.md
+- _posts/2019-09-18-when-a-prospect-responds-yes-but-only-if-they-get-a-discount.md
+- _posts/2019-09-25-10-open-questions-to-kick-off-conversations-with-sales-prospects.md
+- _posts/2019-10-02-sales-teams-using-chromeos-reducing-cost-for-less-tech-savvy-teams.md
+- _posts/2019-10-09-4-common-features-of-effective-sales-cadences.md
+- _posts/2019-10-16-5-ways-to-increase-your-telesales-team-s-effectiveness.md
+- _posts/2019-10-23-sales-tactics-we-need-to-abandon-in-2020.md
+- _posts/2019-10-30-15-ways-around-the-now-isn-t-a-good-time-objection.md
+- _posts/2019-11-06-top-7-goals-for-sales-leaders-in-2020-and-how-to-achieve-them.md
+- _posts/2019-11-13-how-to-write-a-linkedin-profile-that-will-generate-more-leads.md
+- _posts/2019-11-20-how-sales-managers-can-make-the-most-of-performance-reviews.md
+- _posts/2019-11-27-why-listening-skills-beats-product-knowledge-how-to-train-a-new-salesperson.md
+- _posts/2019-12-04-updated-sales-playbook-for-social-selling.md
+- _posts/2019-12-11-7-sales-follow-up-emails-that-get-better-responses.md
+- _posts/2019-12-18-get-ready-for-2020-5-ways-to-improve-your-sales-skills.md
+- _posts/2020-01-02-sales-enablement-what-is-it-and-what-tools-should-you-use.md
+- _posts/2020-01-08-how-to-be-more-confident-on-an-online-demo.md
+- _posts/2020-01-15-how-to-create-a-more-effective-sales-plan-for-2020.md
+- _posts/2020-01-20-5-actionable-ways-to-put-the-customer-first.md
+- _posts/2020-01-22-why-outbound-and-inbound-sales-teams-need-separate-processes.md
+- _posts/2020-01-29-a-guide-to-sales-scripts-in-consultative-selling.md
+- _posts/2020-02-05-10-sales-exercises-to-get-your-team-fired-up-to-sell-more-in-2020.md
+- _posts/2020-02-12-how-to-increase-conversion-rates-with-a-culture-of-instant-online-demos.md
+- _posts/2020-02-17-starterstory-interview-with-our-ceo.md
+- _posts/2020-02-19-how-to-grow-sales-with-strategic-partnerships.md
+- _posts/2020-02-26-five-ways-outbound-sales-teams-can-connect-with-hard-to-reach-prospects.md
+- _posts/2020-03-04-how-to-use-online-screen-sharing-to-cut-the-sales-cycle-in-half.md
+- _posts/2020-03-11-make-sales-pipeline-management-easier-for-sales-leaders.md
+- _posts/2020-03-18-going-remote-for-the-first-time-practical-advice-for-businesses-adapting-to-coronavirus.md
+- _posts/2020-03-24-business-continuity-statement-in-light-of-covid19.md
+- _posts/2020-03-25-coronavirus-how-do-companies-support-employees-through-this.md
+- _posts/2020-03-30-webinar-series-going-from-field-sales-to-inside-sales.md
+- _posts/2020-04-01-tired-of-chasing-prospects-up-shorten-your-sales-cycle-with-screen-sharing.md
+- _posts/2020-04-08-sales-team-working-remotely-how-can-companies-adapt.md
+- _posts/2020-04-15-does-your-customer-service-team-need-to-work-from-home-how-to-adjust.md
+- _posts/2020-04-22-why-customer-success-leaders-rely-on-crankwheel-for-complaints-and-on-boarding.md
+- _posts/2020-04-29-screen-sharing-to-close-more-deals-how-to-get-your-team-on-board.md
+- _posts/2020-05-09-virtual-conference-everything-you-need-to-know-to-run-a-successful-one.md
+- _posts/2020-05-13-how-inbound-sales-teams-can-stay-productive-when-working-from-home.md
+- _posts/2020-05-20-how-outbound-sales-teams-can-stay-on-target-when-working-from-home.md
+- _posts/2020-05-27-do-you-need-to-adjust-how-sales-managers-can-reset-2020-targets.md
+- _posts/2020-06-03-how-customer-service-teams-can-look-after-customers-during-covid-19.md
+- _posts/2020-06-10-how-to-get-awesome-at-virtual-selling.md
+- _posts/2020-06-17-growth-during-uncertainty-how-to-plan-for-an-unpredictable-future.md
+- _posts/2020-06-22-how-to-choose-the-right-office-communication-tools-to-increase-your-productivity.md
+- _posts/2020-06-24-how-to-design-presentations-that-wow-customers-during-demos.md
+- _posts/2020-07-01-10-ways-to-write-better-outbound-sales-emails-and-messages.md
+- _posts/2020-07-08-build-and-maintain-strong-new-client-relationships-when-virtual-selling.md
+- _posts/2020-07-15-five-ways-to-make-the-most-of-instant-online-demos-during-lockdown.md
+- _posts/2020-07-22-how-to-give-prospects-an-awesome-b2b-sales-experience.md
+- _posts/2020-07-29-time-effective-ways-to-include-sales-metrics-in-team-workflows.md
+- _posts/2020-08-12-sales-during-uncertainty-developing-robust-and-realistic-sales-strategies.md
+- _posts/2020-08-19-how-to-use-linkedin-and-instant-demos-to-generate-more-leads.md
+- _posts/2020-08-21-9-detailed-strategies-saas-companies-use-to-increase-customer-lifetime-value.md
+- _posts/2020-08-26-how-to-down-sell-strategically-compromise-to-salvage-deals.md
+- _posts/2020-09-02-how-to-ask-sales-leads-smart-questions-about-pain-points-and-goals.md
+- _posts/2020-09-09-sales-integrity-why-it-s-essential-and-how-to-achieve-it.md
+- _posts/2020-09-16-how-to-use-active-listening-and-instant-demos-to-increase-conversion-rates.md
+- _posts/2020-09-23-creative-use-of-remote-screen-shares-to-improve-sales-conversion-rates.md
+- _posts/2020-10-01-7-ways-to-succeed-in-remote-sales-into-2021-and-beyond.md
+- _posts/2020-10-06-how-to-set-hit-sales-targets-in-this-new-normal.md
+- _posts/2020-10-14-15-now-is-not-a-good-time-objections-you-might-encounter.md
+- _posts/2020-10-21-long-term-sales-playbook-for-working-from-home-field-sales.md
+- _posts/2020-10-28-why-you-should-always-book-future-meetings-on-a-call-not-after.md
+- _posts/2020-11-04-do-you-have-all-your-sales-enablement-materials-ready-a-checklist-for-what-you-should-need.md
+- _posts/2020-11-11-looking-back-at-100-releases-of-screen-sharing-for-sales-crankwheel.md
+- _posts/2020-11-18-lockdown-2-what-should-sales-leaders-and-teams-do-differently.md
+- _posts/2020-11-25-planning-for-2021-how-to-thrive-during-this-new-normal.md
+- _posts/2020-11-30-would-you-like-a-crankwheel-2020-holiday-t-shirt.md
+- _posts/2020-12-01-how-to-make-remote-selling-work-for-you.md
+- _posts/2020-12-02-how-to-create-a-sales-strategy-for-2021.md
+- _posts/2020-12-04-targeted-email-marketing-to-increase-sales-leads.md
+- _posts/2020-12-09-christmas-shopping-inspiration-10-highly-rated-sales-books-you-should-buy.md
+- _posts/2020-12-11-quiz-marketing-an-effective-way-to-get-highly-qualified-leads.md
+- _posts/2020-12-14-a-comprehensive-guide-to-using-linkedin-sales-navigator-in-2021.md
+- _posts/2020-12-16-long-term-sales-playbook-for-working-from-home-inbound-teams.md
+- _posts/2021-01-06-top-10-crm-tools-for-small-and-medium-businesses.md
+- _posts/2021-01-13-solution-selling-what-is-it-and-when-should-you-use-it.md
+- _posts/2021-01-20-solution-selling-how-to-assess-what-prospects-need.md
+- _posts/2021-01-27-solution-selling-how-to-create-amazing-presentations-that-get-results.md
+- _posts/2021-02-03-solution-selling-overcome-objections-sell-strategically-and-follow-up-effectively.md
+- _posts/2021-02-10-should-you-be-strategic-or-tactical-how-to-sell-during-a-pandemic.md
+- _posts/2021-02-17-why-sales-has-shifted-from-always-be-closing-to-always-helping.md
+- _posts/2021-02-24-what-s-the-soft-sell-and-how-can-you-perfect-this-as-a-salesperson.md
+- _posts/2021-03-03-are-you-ready-for-every-sales-call-a-simple-guide-to-planning-and-research.md
+- _posts/2021-03-05-how-to-implement-customer-success-to-drive-growth.md
+- _posts/2021-03-08-how-to-use-instant-demos-and-better-proposals-to-increase-conversion-rates.md
+- _posts/2021-03-10-mirroring-and-psychology-in-sales-what-you-need-to-know-to-succeed.md
+- _posts/2021-03-12-top-10-sales-productivity-tools-to-increase-your-b2b-sales.md
+- _posts/2021-03-15-7-lead-generation-tactics-to-help-you-crush-your-sales-goals.md
+- _posts/2021-03-17-grab-your-free-webcard-today-and-connect-crankwheel-in-10-seconds.md
+- _posts/2021-03-24-sales-email-and-message-tone-of-voice-why-it-matters.md
+- _posts/2021-03-29-die-7-wichtigsten-ziele-fur-vertriebsleiter-im-jahr-2020-und-wie-man-sie-erreicht.md
+- _posts/2021-03-31-5-follow-up-sales-calls-tactics-to-increase-conversion-rates.md
+- _posts/2021-04-05-5-principles-of-great-customer-service.md
+- _posts/2021-04-07-what-could-sales-look-like-in-a-post-pandemic-world.md
+- _posts/2021-04-09-6-signs-your-sales-rep-can-become-a-skilled-sales-manager.md
+- _posts/2021-04-14-4-ways-to-generate-sales-leads-when-events-and-expos-are-cancelled.md
+- _posts/2021-04-21-new-sales-training-for-your-team-to-refresh-skills.md
+- _posts/2021-04-28-overcoming-objections-5-methods-you-need-to-know.md
+- _posts/2021-05-05-how-have-sales-teams-used-crankwheel-to-cut-the-sales-cycle-in-half.md
+- _posts/2021-05-12-5-steps-to-successfully-sell-to-multiple-decision-makers-and-budget-holders.md
+- _posts/2021-05-19-how-to-approach-sales-with-a-customer-centric-methodology.md
+- _posts/2021-05-26-7-reasons-to-invest-in-sales-automation-now.md
+- _posts/2021-06-02-tap-into-and-use-the-3-layers-of-sales-questions.md
+- _posts/2021-06-09-linkedin-sales-insights-how-it-can-help-sales-teams.md
+- _posts/2021-06-16-top-10-apps-for-every-salesperson.md
+- _posts/2021-06-18-prospecting-to-a-niche-market-5-killer-ideas.md
+- _posts/2021-06-23-performance-reviews-what-they-should-include-and-how-sales-managers-can-use-them-to-improve-results.md
+- _posts/2021-06-30-buyer-intent-know-the-funnel-stages-and-stand-out-with-an-impactful-message.md
+- _posts/2021-07-05-customer-success-stories.md
+- _posts/2021-07-06-how-cloud-computing-improves-the-sales-process.md
+- _posts/2021-07-07-career-transition-breaking-into-saas-sales.md
+- _posts/2021-07-12-cloudtelecom-integrates-crankwheel-to-their-new-cloudoffice-remote-work-solution.md
+- _posts/2021-07-14-how-to-increase-inbound-leads.md
+- _posts/2021-07-14-zoom-not-working-for-screen-sharing-how-to-fix-it.md
+- _posts/2021-07-21-an-outbound-sales-script-that-works.7-steps-to-success.md
+- _posts/2021-07-28-how-to-create-or-improve-the-sales-process-and-why-this-is-mission-critical.md
+- _posts/2021-08-03-keeping-track-of-multi-channel-marketing-campaigns.md
+- _posts/2021-08-04-how-to-have-a-successful-sales-team-what-to-watch-out-for-when-interviewing-candidates.md
+- _posts/2021-08-10-best-ways-to-improve-sales-lead.md
+- _posts/2021-08-11-convert-more-sales-leads-by-adding-visual-elements-to-calls.md
+- _posts/2021-08-17-sales-and-marketing-alignment-all-you-need-to-know.md
+- _posts/2021-08-18-7-ways-to-grow-a-digital-agency-crankwheel-growth-guide.md
+- _posts/2021-08-19-the-ultimate-guide-to-telesales-for-beginners-and-sales-pros.md
+- _posts/2021-08-24-7-tips-for-developing-a-great-inbound-sales-process.md
+- _posts/2021-08-24-crankwheel-named-best-telemarketing-software-of-2021-by-digital.com-press-release.md
+- _posts/2021-08-25-how-to-design-a-hybrid-sales-strategy.md
+- _posts/2021-09-01-5-skills-sales-engineers-need-and-the-tools-to-maximize-them.md
+- _posts/2021-09-09-reykjavik-based-sales-tech-startup-crankwheel-acquires-copenhagen-based-accordium.md
+- _posts/2021-09-22-7-best-email-marketing-strategies-to-increase-conversions.md
+- _posts/2021-10-06-crankwheel-wins-a-2021-top-performer-award-in-screen-sharing-from-sourceforge.md
+- _posts/2021-10-06-how-does-brand-equity-influence-b2b-sales.md
+- _posts/2021-10-20-telesales-11-tips-that-ensure-a-higher-close-rate.md
+- _posts/2021-10-27-9-virtual-selling-blunders-that-make-customers-think-twice.md
+- _posts/2021-11-03-a-guide-to-virtual-sales.md
+- _posts/2021-11-09-telephone-prospecting-10-steps-towards-a-successful-call-campaign.md
+- _posts/2021-11-10-digital-agency-management-101-the-ultimate-pricing-guide.md
+- _posts/2021-11-16-5-ways-to-get-more-clients-for-your-insurance-business.md
+- _posts/2021-11-17-5-best-sales-presentations-solutions-to-increase-conversion-rates.md
+- _posts/2021-11-24-9-vital-tips-to-finding-winning-clients-for-your-digital-marketing-agency.md
+- _posts/2021-12-01-sales-team-motivation-how-to-keep-your-team-motived.md
+- _posts/2021-12-06-selling-insurance-remotely-top-10-do-s-and-don-ts.md
+- _posts/2021-12-08-how-to-improve-and-optimise-the-efficiency-of-your-customer-service-practices.md
+- _posts/2021-12-15-why-marketing-agencies-need-an-instant-inbound-sales-solution.md
+- _posts/2021-12-22-12-ways-ai-and-ml-are-revolutionizing-marketing-and-sales.md
+- _posts/2022-01-05-goals-for-sales-leaders-in-2022-improve-sales-close-rates.md
+- _posts/2022-01-10-2022-guide-for-digital-agencies.md
+- _posts/2022-01-12-professional-ghosting-how-to-avoid-potential-clients-from-suddenly-ending-communication.md
+- _posts/2022-01-19-11-must-listen-podcasts-for-anyone-who-works-in-sales.md
+- _posts/2022-01-19-press-release-crankwheel-enables-users-to-project-videos-to-screen-sharing-sessions.md
+- _posts/2022-01-26-critical-characteristics-of-b2b-ecommerce-selling.md
+- _posts/2022-02-02-increase-inbound-sales-leads-with-engaging-content-on-linkedin.md
+- _posts/2022-02-09-5-outstanding-sales-outreach-tips-that-get-meetings-booked.md
+- _posts/2022-02-16-4-tips-that-make-your-solar-sales-pitch-perfect.md
+- _posts/2022-02-16-how-behavioural-science-can-give-you-an-edge-in-sales.md
+- _posts/2022-02-22-5-major-trends-in-video-conferencing-to-watch-in-2022.md
+- _posts/2022-02-23-5-powerful-ways-to-use-customer-reviews-in-your-email-content.md
+- _posts/2022-03-01-the-impact-of-workplace-noise-bring-control-to-uncontrollable-environments.md
+- _posts/2022-03-02-the-10-books-on-sales-and-sales-techniques-you-need-to-read.md
+- _posts/2022-03-09-everything-you-need-to-know-about-outbound-lead-generation.md
+- _posts/2022-03-16-using-sales-promotion-to-drive-more-sales-and-capture-leads.md
+- _posts/2022-03-23-5-ways-to-build-brand-identity-and-values-using-email-marketing.md
+- _posts/2022-03-30-increase-inbound-sales-leads-with-engaging-content-on-linkedin.md
+- _posts/2022-04-01-is-digital-marketing-necessary-for-a-service-organization.md
+- _posts/2022-04-04-6-features-you-must-look-for-in-cold-calling-software.md
+- _posts/2022-04-07-top-8-sales-forecasting-methods-that-exceed-the-target-revenue.md
+- _posts/2022-04-13-secrets-of-cold-calling-38-experts-share-their-tips-and-techniques.md
+- _posts/2022-04-20-essential-guide-to-building-a-community-for-seo-and-branding.md
+- _posts/2022-04-22-5-cyber-security-risks-every-digital-marketer-faces-in-2022.md
+- _posts/2022-04-26-the-guide-to-a-cold-calling-script-that-will-not-alienate-your-prospects.md
+- _posts/2022-04-27-sales-promotion-ideas-for-service-based-businesses.md
+- _posts/2022-05-03-the-14-best-cold-calling-opening-lines-that-work.md
+- _posts/2022-05-04-everything-you-need-to-know-about-video-prospecting.md
+- _posts/2022-05-06-the-8-things-you-can-do-to-be-more-assertive-in-sales.md
+- _posts/2022-05-11-9-Best-Most-effective-Tools-for-Cold-Calling.md
+- _posts/2022-05-17-7-best-sales-automation-strategies-for-businesses.md
+- _posts/2022-05-18-how-to-incorporate-motion-graphics-into-your-content-marketing-strategy.md
+- _posts/2022-05-25-selling-insurance-from-home-how-to-keep-prospects-engaged.md
+- _posts/2022-05-30-9-marketing-strategies-every-insurance-agent-should-know.md
+- _posts/2022-06-01-why-screen-sharing-is-a-necessary-tool-to-close-clients-on-a-remote-sales-call.md
+- _posts/2022-06-08-increase-conversion-rates-with-an-effective-b2b-sales-funnel-strategy.md
+- _posts/2022-06-15-how-to-pitch-digital-marketing-services-to-businesses.md
+- _posts/2022-06-22-the-complete-guide-to-cold-calling-vs-warm-calling.md
+- _posts/2022-06-24-how-to-sell-solar-panels-from-home.md
+- _posts/2022-06-29-your-ultimate-guide-to-getting-inbound-leads-from-social-media-expert-tips.md
+- _posts/2022-07-06-the-top-9-insurance-selling-skills-you-need-to-know.md
+- _posts/2022-07-13-12-insurance-marketing-ideas-any-agent-can-use.md
+- _posts/2022-07-27-emotional-selling-101-how-to-persuade-customers-to-buy-through-feelings.md
+- _posts/2022-08-02-how-to-sell-rooftop-solar-panels-online.md
+- _posts/2022-08-10-10-suggestions-for-incorporating-gamification-into-your-marketing-strategy.md
+- _posts/2022-08-12-the-nuts-and-bolts-of-social-media-marketing-for-insurance-agents.md
+- _posts/2022-08-17-13-tips-to-improve-your-remote-selling-conversion-rates.md
+- _posts/2022-08-17-new-video-sharing-capabilities-in-crankwheel.md
+- _posts/2022-08-18-webinar-using-videos-for-prospecting-sales-calls-and-follow-ups.md
+- _posts/2022-08-23-how-to-sell-to-people-turning-65.md
+- _posts/2022-08-24-how-to-avoid-these-5-virtual-selling-challenges.md
+- _posts/2022-08-30-the-winning-tactics-of-selling-medicare-supplement-plans.md
+- _posts/2022-08-31-the-complete-guide-to-bant-for-cold-calling-in-2022.md
+- _posts/2022-09-07-10-proven-digital-marketing-strategies-for-solar-sales-agents.md
+- _posts/2022-09-14-top-12-tips-to-gain-incredible-referrals-in-telesales.md
+- _posts/2022-09-21-how-to-send-effective-solar-email-marketing-content.md
+- _posts/2022-09-28-9-health-life-insurance-lead-vendors-to-consider.md
+- _posts/2022-10-02-how-to-collect-convert-and-retain-insurance-leads.md
+- _posts/2022-10-05-top-questions-your-solar-sales-script-should-cover.md
+- _posts/2022-10-06-sharing-your-screen-to-a-tesla.md
+- _posts/2022-10-12-what-digital-agency-software-do-you-need.md
+- _posts/2022-10-18-how-to-screen-share-with-whatsapp.md
+- _posts/2022-10-19-7-tips-to-easily-sell-medicare-supplements-over-the-phone.md
+- _posts/2022-10-26-how-to-evolve-from-remote-selling-to-virtual-selling.md
+- _posts/2022-10-27-open-enrollment-helping-clients-to-fill-out-applications-remotely-with-crankwheel.md
+- _posts/2022-11-07-facebook-stories-for-businesses-full-guide-2022.md
+- _posts/2022-11-09-the-importance-of-using-video-in-sales-emails.md
+- _posts/2022-11-15-an-seo-guide-for-new-solar-companies-and-how-to-nail-it.md
+- _posts/2022-11-16-using-video-in-real-estate-email-marketing.md
+- _posts/2022-11-22-facebook-marketing-for-insurance-agents.md
+- _posts/2022-11-23-creating-the-perfect-sales-engagement-strategy.md
+- _posts/2022-11-29-instagram-marketing-for-insurance-agents-an-all-in-one-guide-to-get-started.md
+- _posts/2022-11-30-9-creative-marketing-ideas-for-insurance-agents.md
+- _posts/2022-12-07-the-top-13-telesales-closing-techniques.md
+- _posts/2022-12-08-maximize-your-saas-sales-to-small-business-owners-tips-and-strategies.md
+- _posts/2022-12-14-a-quick-email-marketing-guide-for-insurance-agents.md
+- _posts/2022-12-21-top-marketing-strategies-for-financial-advisors.md
+- _posts/2022-12-23-nem-3.0-how-solar-sales-agents-can-prepare-and-survive.md
+- _posts/2023-01-03-10-unique-virtual-selling-practices.md
+- _posts/2023-01-03-how-to-generate-leads-for-solar-sales.md
+- _posts/2023-01-03-ppc-marketing-for-insurance-agents.md
+- _posts/2023-01-04-the-do-s-and-don-ts-of-virtual-meetings.md
+- _posts/2023-01-10-8-smart-goals-for-insurance-agents-in-2023.md
+- _posts/2023-01-11-writing-captivating-content-for-insurance-websites.md
+- _posts/2023-01-18-how-to-sell-insurance-over-the-phone.md
+- _posts/2023-02-08-b2b-sales-vs.b2c-sales-understanding-the-different-approaches.md
+- _posts/2023-02-09-the-top-11-solar-marketing-strategies.md
+- _posts/2023-02-15-selling-medicare-advantage-from-home-tips-tricks-and-benefits.md
+- _posts/2023-02-15-the-top-15-sales-prospecting-tips.md
+- _posts/2023-02-22-how-to-record-your-figma-prototype-the-easy-way.md
+- _posts/2023-02-22-tips-and-tricks-to-scale-your-solar-energy-business.md
+- _posts/2023-03-01-11-prospecting-tips-for-insurance-agents.md
+- _posts/2023-03-01-how-to-manage-a-pipeline-of-leads-in-simple-steps.md
+- _posts/2023-03-08-the-9-best-saas-sales-tools.md
+- _posts/2023-03-13-how-to-build-solar-sales-pipeline.md
+- _posts/2023-03-21-how-to-generate-solar-leads-on-facebook-solar-marketing-hack.md
+- _posts/2023-03-22-tips-for-the-perfect-sales-prospecting-video.md
+- _posts/38-cold-calling-tips-and-techniques-from-sales-experts-copy.md

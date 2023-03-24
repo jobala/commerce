@@ -1,0 +1,41 @@
+<!-- <header id="header" class="{% if page.url == "/" %}av_header_transparency av_header_scrolldown{% endif %} header_color dark_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_custom av_header_sticky av_header_shrinking_disabled av_header_stretch av_mobile_menu_tablet av_header_searchicon_disabled av_header_unstick_top_disabled av_seperator_big_border av_minimal_header av_bottom_nav_disabled" role="banner"  > -->
+	<a id="advanced_menu_toggle" href="#" data-av_icon="" data-av_iconfont="entypo-fontello"></a>
+	<a id="advanced_menu_hide" href="#" data-av_icon="" data-av_iconfont="entypo-fontello"></a>
+	<div id="header_main" class="container_wrap container_wrap_logo">
+		<div class="container">
+			<div class="inner-container">
+				<!-- Site logo -->
+				<strong class="logo">
+					<a href="{% if page.url == '/' %}#{% else %}{{ site.baseurl | append: '/' | replace: '//', '/' | replace: ':/', '://' }}{% endif %}">
+						<img height="100" width="300" src="{{ site.baseurl | append: '/static/images/logo_header.png' | replace: '//', '/' | replace: ':/', '://' }}" alt="CrankWheel" />
+					</a>
+				</strong>
+				<nav class="main_menu" data-selectname="Select a page" role="navigation"  >
+					<div class="avia-menu av-main-nav-wrap">
+						<ul id="avia-menu" class="menu av-main-nav">
+							{% for item in site.data.nav_top %}
+							<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-top-level {% if item.button %}getbeta av-menu-button av-menu-button-colored{% endif %}">
+								<a href="{% if item.link == page.url %}#{% else %}{% if item.type == "internal" %}{{ site.baseurl | append: item.link | replace: '//', '/' | replace: ':/', '://' }}{% elsif item.type == "external" %}{{ item.link }}{% endif %}{% endif %}" >
+									<span class="avia-bullet"></span>
+									<span class="avia-menu-text">{{ item.name }}</span>
+									<span class="avia-menu-fx">
+										<span class="avia-arrow-wrap">
+											<span class="avia-arrow">
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</nav>
+				<!-- end inner-container-->
+			</div>
+			<!-- end container-->
+		</div>
+		<!-- end container_wrap-->
+	</div>
+	<div class="header_bg"></div>
+	<!-- end header -->
+        <!-- </header> -->

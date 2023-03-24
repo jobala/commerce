@@ -1,0 +1,36 @@
+- name: "Features"
+  type: "internal"
+  link: "/#features"
+
+- name: "Studies"
+  type: "internal"
+  link: "/#studies"
+
+- name: "Pricing"
+  type: "internal"
+  link: "/pricing"
+
+- name: "About"
+  type: "internal"
+  link: "/#about"
+
+- name: "Join our Team"
+  type: "internal"
+  link: "/join-our-team/"
+
+- name: "Blog"
+  type: "internal"
+  link: "/blog/"
+
+- name: "Contact"
+  type: "internal"
+  link: "/#contact"
+
+- name: "Dashboard"
+  type: "external"
+  link: "https://meeting.is/ss"
+
+- name: "Start Now For Free"
+  type: "external"
+  link: "https://chrome.google.com/webstore/detail/dooinopjfnhlmmdkdepajfipfhlcmjgp"
+  button: true

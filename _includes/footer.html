@@ -1,0 +1,17 @@
+<footer class="container_wrap socket_color" id="socket" role="contentinfo" >
+	<div class="container">
+		<span class="copyright">
+			<a href="{{ site.baseurl | append: '/its-a-kind-of-funding/' | replace: '//', '/' | replace: ':/', '://' }}" class="poweredby">
+				<span class="dkcop">Supported by</span>
+				<img src="{{ site.baseurl | append: '/static/images/fund.png' | replace: '//', '/' | replace: ':/', '://' }}" alt="Technology Development Fund" />
+			</a>
+			<a href="http://www.drakkar.is/" class="poweredby">
+				<span class="dkcop">Webdesign by</span>
+				<img src="{{ site.baseurl | append: '/static/images/drakkar.png' | replace: '//', '/' | replace: ':/', '://' }}" alt="Drakkar Studio" />
+			</a>
+			{% for item in site.data.nav_bottom %}
+			<a class="privacy-policy" href="{% if item.link == page.url %}#{% else %}{% if item.type == "internal" %}{{ site.baseurl | append: item.link | replace: '//', '/' | replace: ':/', '://' }}{% elsif item.type == "external" %}{{ item.link }}{% endif %}{% endif %}">{{ item.name }}</a>
+			{% endfor %}
+		</span>
+	</div>
+</footer>

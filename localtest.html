@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+body {
+	margin: 0;
+}
+
+.public-link-iframe {
+	display: block;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<title> Basic example of a white-label (forwarding) public link page where the iframe covers the whole viewport </title>
+</head>
+<body>
+	<iframe id="crankwheel-frame" class="public-link-iframe" src="https://cwtesting.eu.ngrok.io/cw"></iframe>
+
+	<script>
+var crankwheelAccountUrl = 'https://cwtesting.eu.ngrok.io/cw';
+if (document.location.search) {
+	window.location.href = crankwheelAccountUrl + document.location.search;
+}
+	</script>
+</body>
+</html>

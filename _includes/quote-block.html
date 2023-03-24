@@ -1,0 +1,22 @@
+<div class="row shadow-container section">
+    {% if include.image %}
+    <div class="col s12 m12 l3">
+        <div class="testimonial-person">
+            <img class="rounding yellow-border" src="{{include.image}}">
+        </div>
+    </div>
+    <div class="col s12 m12 l9">
+        <div class="quote-bg yellow-mark line-height-2X">
+            {{include.content}}
+        </div>
+        <div>{{include.source}}</div>
+    </div>
+    {% else %}
+    <div class="col s12 m12 l10 offset-l1">
+        <div class="quote-bg yellow-mark line-height-2X">
+            {{include.content}}
+        </div>
+        <div>{{include.source}}</div>
+    </div>
+    {% endif %}
+</div>

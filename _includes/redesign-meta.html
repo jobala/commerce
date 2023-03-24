@@ -1,0 +1,45 @@
+<!-- Meta information-->
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="robots" content="all">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+{% if page.canonical-url == nil %}
+{% capture canonical %}{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}{% endcapture %}
+{% else %}
+{% assign canonical = page.canonical-url %}
+{% endif %}
+<link rel="canonical" href="{{ canonical }}">
+<meta name="apple-mobile-web-app-title" content="CrankWheel">
+<meta name="application-name" content="CrankWheel">
+
+<!-- Opengraph-->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:keywords" content="{% if page.keywords %}{{ page.keywords }} | {{ site.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:image" content="{% if page.thumbnail %}{{ site.url | append: site.baseurl | append: page.thumbnail | replace: '//', '/' | replace: ':/', '://' }}{% else %}{{ site.url | append: site.baseurl | append: site.thumbnail | replace: '//', '/' | replace: ':/', '://' }}{% endif %}">
+<meta property="og:url" content="{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | replace: ':/', '://' }}">
+
+<!-- img_src -->
+<link rel="img_src" href="{% if page.thumbnail %}{{ site.url | append: site.baseurl | append: page.thumbnail | replace: '//', '/' | replace: ':/', '://' }}{% else %}{{ site.url | append: site.baseurl | append: site.thumbnail | replace: '//', '/' | replace: ':/', '://' }}{% endif %}" />
+
+<!-- TwitterCard-->
+{% if site.twitter_user %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:keywords" content="{% if page.keywords %}{{ page.keywords }} | {{ site.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image:src" content="{% if page.thumbnail %}{{ site.url | append: site.baseurl | append: page.thumbnail | replace: '//', '/' | replace: ':/', '://' }}{% else %}{{ site.url | append: site.baseurl | append: site.thumbnail | replace: '//', '/' | replace: ':/', '://' }}{% endif %}">
+<meta name="twitter:creator" content="{{ site.twitter_user }}">
+<meta name="twitter:site" content="{{ site.twitter_user }}">
+<meta name="twitter:url" content="{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | replace: ':/', '://' }}">
+{% endif %}
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ site.baseurl | append: '/static/images/fav/apple-icon-144x144.png' | replace: '//', '/' | replace: ':/', '://' }}">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="google-site-verification" content="zY-9N1K8HpU_KKYe4NQ33yqYTViMWtXTxMEDYu6ZWG4" />

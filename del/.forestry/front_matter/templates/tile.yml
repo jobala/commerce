@@ -1,0 +1,71 @@
+---
+label: Tile
+hide_body: true
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  config:
+    required: true
+- name: label
+  label: Label
+  type: text
+  hidden: false
+- name: thumbnail
+  label: Thumbnail
+  type: file
+- name: subtitle
+  label: SubTitle
+  type: text
+  hidden: false
+- name: url
+  label: URL
+  type: text
+  hidden: false
+  config:
+    required: true
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  config:
+    max: 190
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: Now
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: CrankWheel
+- name: pinned
+  label: Pinned
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear pinned an overview page. -1 will
+    show it as normal content.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: order
+  label: Order
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear along the sorted content in the
+    overview page. -1 will show it as usual.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1

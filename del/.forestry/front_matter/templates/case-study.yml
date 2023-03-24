@@ -1,0 +1,86 @@
+---
+label: Case Study
+hide_body: false
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: case-study
+- name: title
+  label: Title
+  hidden: false
+  type: textarea
+- name: description
+  label: Description
+  hidden: false
+  type: textarea
+  config:
+    max: 190
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- type: file
+  label: Thumbnail
+  name: thumbnail
+- name: top_menu
+  label: Top menu link
+  description: Is showing in the top menu?
+  default: true
+  hidden: false
+  type: boolean
+- name: pinned
+  label: Pinned
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear pinned an overview page. -1 will
+    show it as normal content.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: order
+  label: Order
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear along the sorted content in the
+    overview page. -1 will show it as usual.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: menu_label
+  label: Menu Label
+  description: text used for labeling the menu items and as titles for the tiles in
+    overview pages
+  type: text
+  hidden: false
+- name: keywords
+  label: Keywords
+  hidden: false
+  type: text
+- type: blocks
+  name: hero
+  label: Hero section
+  description: Hero section for the page. Please select only one
+  hidden: false
+  template_types:
+  - background-hero
+  - text-highlight
+  - two-column-highlight
+- type: blocks
+  name: sections
+  label: Sections
+  hidden: false
+  template_types:
+  - one-column
+  - two-columns
+  - three-columns
+  - testimonial-column
+pages:
+- _case_studies/how-insurance-agents-increase-their-sales-over-the-phone.md

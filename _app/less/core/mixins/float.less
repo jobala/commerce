@@ -1,0 +1,39 @@
+/**
+ * extend .clfx from
+ * core -> snippets -> float.less
+ */
+
+._mx_float(@item) {
+
+	&:extend(.clfx all);
+
+	& > @{item} {
+		float: left;
+	}
+}
+
+
+
+._mx_float-r(@item) {
+
+	&:extend(.clfx all);
+
+	& > @{item} {
+		float: right;
+	}
+}
+
+
+
+._mx_float-justify(@item) {
+
+	&:extend(.clfx all);
+
+	& > @{item} {
+		float: left;
+	}
+
+	& > @{item} + @{item}:last-child {
+		float: right;
+	}
+}

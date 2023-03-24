@@ -1,0 +1,60 @@
+<div class="light-grey-bcg section">
+    <div class="{{include.container_type | default: 'container-fluid' }}">
+        <div class="row">
+            <div class="col s12 m10 offset-m1">
+                <div class="row">
+
+                    {% comment %} overview page title {% endcomment %}
+                    {% if include.title %}
+                    <div class="col s12">
+                        <h1 class="text-center"><strong>{{include.title}}</strong></h1>
+                    </div>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        {% if include.description %}
+                        <p class="text-center">{{include.description}}</p>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% comment %} Pinned section {% endcomment %}
+                    {% if include.show_pinned %}
+
+                        {% if include.pinned_title %}
+                        <div class="col s12">
+                            <h2><strong>{{include.pinned_title}}</strong></h2>
+                        </div>
+                        {% endif %}
+
+                        {% comment %} pinned content list {% endcomment %}
+                        {% include tiles_sorting.html list=include.list prop="pinned" column_class=include.column_class category=include.category show_date=false %}
+
+                    {% endif %}
+
+                    {% comment %} overview page content title {% endcomment %}
+                    <div class="col s12">
+                        {% if include.list_title %}
+                        <h2><strong>{{include.list_title}}</strong></h2>
+                        {% endif %}
+                    </div>
+
+                    {% comment %} overview page ordered content {% endcomment %}
+
+                    {% include tiles_sorting.html list=include.list prop="order" column_class=include.column_class category=include.category show_date=false %}
+
+                    {% comment %} overview page unordered content {% endcomment %}
+                    {% for item in include.list %}
+                    {% unless item.top_menu == false %}
+                    {% assign order = item.order | floor %}
+                    {% unless item.order and order > -1 %}
+
+                    {% include tile.html item=item column_class=include.column_class category=include.category show_date=include.show_date %}
+
+                    {% endunless %}
+                    {% endunless %}
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ page.html_class }} html_stretched responsive av-preloader-active av-preloader-enabled av-default-lightbox  html_header_top html_logo_left html_main_nav_header html_menu_right html_custom html_header_sticky html_header_shrinking_disabled html_mobile_menu_tablet html_disabled html_header_searchicon_disabled html_content_align_center html_header_unstick_top_disabled html_header_stretch html_minimal_header">
+	<head>
+    {% include head-tags.html %}
+		<!-- Meta information: title, description, opengraph, twittercard -->
+		{% include head-meta.html %}
+
+		<!-- Head assets: css, js, fonts -->
+		{% include head-src.html %}
+		{% include drakkar-head.html %}
+	</head>
+	<body id="top" class="{{ page.body_class }} stretched raleway lato template_page">
+		<div id='wrap_all'>
+			<div id='main' data-scroll-offset='68'>
+				<!-- Page content -->
+				{{ content }}
+
+				<!-- Site footer -->
+				{% include footer.html %}
+			</div>
+		</div>
+
+		<a href="#top" title="Scroll to top" id="scroll-top-link" data-av_icon="" data-av_iconfont="entypo-fontello"><span class="avia_hidden_link_text">Scroll to top</span></a>
+
+		<div id="fb-root"></div>
+
+		<!-- Body assets: css, js -->
+		{% include body-src.html %}
+		{% include drakkar-body-src.html %}
+  {% include body-tags.html %}
+	</body>
+</html>

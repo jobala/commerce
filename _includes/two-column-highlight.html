@@ -1,0 +1,21 @@
+<div class="{% if include.background_color == grey %}light-grey-bcg{% endif %} section hero">
+    <div class="{{include.container_type | default: 'container' }}">
+        <div class="row">
+            <div class="two-column-highlight col {{include.column_class | default: 's12 m12 l8 offset-l2' }}">
+                <div class="hero-text">
+                    <h1><strong>{{include.title}}</strong></h1>
+                    {% if include.subtitle %}<p>{{include.subtitle}}</p>{% endif %}
+                    {% if include.highlight_description %}
+                        <h2>{{include.highlight_description}}</h2>
+                    {% endif %}
+                    {% if button_text and button_url and button_url not eq "" %}
+                        <a role="button_url" href="button_url">{{button_text}}</a>
+                    {% endif %}
+                </div>
+                {% if include.image %}
+                <img class="limit-width limit-height" src="{{include.image}}" alt="{{ include.image_alt || default: 'hero image' }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

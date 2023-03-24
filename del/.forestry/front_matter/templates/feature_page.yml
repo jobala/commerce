@@ -1,0 +1,163 @@
+---
+label: Feature page
+hide_body: true
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: feature_page
+- name: title
+  label: Title
+  hidden: false
+  type: text
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- type: file
+  label: Thumbnail
+  name: thumbnail
+- name: pinned
+  label: Pinned
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear pinned an overview page. -1 will
+    show it as normal content.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: order
+  label: Order
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear along the sorted content in the
+    overview page. -1 will show it as usual.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: menu_label
+  label: Menu Label
+  description: text used for labeling the menu items and as titles for the tiles in
+    overview pages
+  type: text
+  hidden: false
+- name: top_menu
+  label: Top menu link
+  description: Is showing in the top menu?
+  default: true
+  hidden: false
+  type: boolean
+- name: slug
+  label: Slug
+  hidden: false
+  type: text
+- name: hero_title
+  label: Hero Title
+  hidden: false
+  type: textarea
+- name: hero_subtitle
+  label: Hero Subtitle
+  hidden: false
+  type: textarea
+- name: hero_description
+  label: Hero Description
+  hidden: false
+  type: textarea
+  config:
+    max: 190
+- name: hero_image
+  label: Hero image
+  hidden: false
+  type: file
+- name: hero_button_text
+  label: Hero Button text
+  hidden: false
+  type: text
+- name: hero_button_url
+  label: Hero Button url
+  hidden: false
+  type: text
+- type: field_group_list
+  name: hero_reasons
+  label: Hero List
+  hidden: false
+  fields:
+  - type: textarea
+    name: description
+    label: Description
+    config:
+      required: true
+  config:
+    labelField: description
+- name: section_title
+  label: Feature Section Title
+  hidden: false
+  type: text
+- name: section_subtitle
+  label: Feature Section SubTitle
+  hidden: false
+  type: text
+- type: field_group_list
+  name: features
+  label: Features
+  hidden: false
+  fields:
+  - type: file
+    name: ilustration
+    label: Image file
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Title
+    config:
+      required: true
+  - type: textarea
+    name: description
+    label: Description
+    config:
+      required: true
+  - type: text
+    name: align
+    label: Alignment
+    config:
+      required: true
+  config:
+    labelField: title
+- type: field_group_list
+  name: used_by
+  label: Used By
+  hidden: false
+  fields:
+  - type: file
+    name: image
+    label: Logo file
+    config:
+      required: true
+  - type: text
+    name: name
+    label: Name
+    config:
+      required: true
+  config:
+    labelField: name
+- type: select
+  name: container_type
+  label: Container Type
+  description: container-fluid uses all the screen, container is narrower
+  hidden: false
+  config:
+    source:
+      type: custom
+    options:
+    - container
+    - container-fluid
+pages:
+- _feature_page/screen-recorder.md

@@ -1,0 +1,24 @@
+<style>
+.highlight{
+    background-image: url("{{include.image}}");
+}
+{{ include.css }}
+</style>
+
+<div class="highlight {% if include.dim %}dim{% endif %}">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="text-center tillium-web semibold">
+                    {{include.company}}
+                </p>
+                <h1 class="text-center desktop-only tillium-web semibold">{{include.title}}</h1>
+                <h3 class="text-center mobile-only tillium-web semibold">{{include.title}}</h3>
+                <p class="text-center tillium-web light">
+                    {{ include.summary | newline_to_br }}
+                </p>
+                {{include.description | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>

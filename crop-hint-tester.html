@@ -1,0 +1,120 @@
+<style>
+body {
+	background-image: url("/static/images/crop-tester.jpg");
+	background-size: cover;
+	background-position: center;
+
+	padding: 0px;
+	margin: 0px;
+}
+
+table {
+	background-color: white;
+}
+
+#boundingbox {
+	box-sizing: border-box;
+	position: absolute;
+	border-style: solid;
+	border-color: red;
+	border-width: 3px;
+}
+</style>
+<script type="text/javascript">
+function updateBoundingBox() {
+	function getVal(name) {
+		var val = document.querySelector('input[name=' + name + ']').value || '0';
+		val = parseInt(val, 10);
+		if (isNaN(val)) {
+			return 0;
+		} else {
+			return val;
+		}
+	}
+
+	var left = getVal('left');
+	var right = getVal('right');
+	var top = getVal('top');
+	var bottom = getVal('bottom');
+
+	var width = window.innerWidth;
+	var height = window.innerHeight;
+
+	var bbox = document.getElementById('boundingbox');
+	boundingbox.style.left = left + 'px';
+	boundingbox.style.top = top + 'px';
+	boundingbox.style.width = (width - left - right) + 'px';
+	boundingbox.style.height = (height - top - bottom) + 'px';
+
+	// These data attributes, set on the dataset of an element that includes
+	// the class 'crankwheel-extra-crop-data', will cause CrankWheel to crop
+	// the given number of pixels (in CSS 'px' dimensions) from the respective
+	// edges of the viewport before screen sharing.
+	bbox.dataset.crankwheelCropLeft = left;
+	bbox.dataset.crankwheelCropRight = right;
+	bbox.dataset.crankwheelCropTop = top;
+	bbox.dataset.crankwheelCropBottom = bottom;
+}
+
+function initScreensharingIndicatorObserver() {
+	// For the first element on the page (if any) that includes the CSS class
+	// 'crankwheel-screen-sharing-indicator', CrankWheel will set the
+	// data attribute 'data-crankwheel-is-sharing-this-tab' (accessible as
+	// element.dataset.crankwheelIsSharingThisTab) to either "true" or "false",
+	// based on whether the current tab is being screen shared right now,
+	// although independent of whether one or more viewers are connected (i.e.
+	// you might have chosen the tab for screen sharing but not yet have
+	// connected a viewer, and this would cause the attribute to be set to
+	// "true").
+	//
+	// If CrankWheel has never screen shared the current tab after the current
+	// document was loaded, the data attribute will be unset, and an unset
+	// attribute should be treated the same as "false".
+	//
+	// We use a MutationObserver to detect when the data attribute is modified
+	// in any way, then read the attribute for every change and update our
+	// state correspondingly.
+	var observer = new MutationObserver(function (mutations) {
+		var text = "OFF";
+		if (document.querySelector('#boundingbox').dataset.crankwheelIsSharingThisTab == "true") {
+			text = "ON";
+		}
+		document.getElementById('indicator').innerHTML = text;
+    });
+	observer.observe(document.getElementById('boundingbox'), {
+		attributes: true,
+		attributeFilter: [ 'data-crankwheel-is-sharing-this-tab' ]
+	});
+}
+</script>
+<html>
+<div id="boundingbox" class="crankwheel-extra-crop-data crankwheel-screen-sharing-indicator">
+	<form action="javascript:updateBoundingBox()">
+		<table>
+			<tr>
+				<td>Left</td><td><input type="number" name="left" value="0"></td>
+			</tr>
+			<tr>
+				<td>Right</td><td><input type="number" name="right" value="0"></td>
+			</tr>
+			<tr>
+				<td>Top</td><td><input type="number" name="top" value="0"></td>
+			</tr>
+			<tr>
+				<td>Bottom</td><td><input type="number" name="bottom" value="0"></td>
+			</tr>
+			<tr>
+				<td colspan="2">Screen sharing of current tab is <span id="indicator">OFF</span></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+function updateBoundingBoxLoop() {
+	updateBoundingBox();
+	setTimeout(updateBoundingBoxLoop, 200);
+};
+updateBoundingBoxLoop();
+initScreensharingIndicatorObserver();
+</script>
+</html>

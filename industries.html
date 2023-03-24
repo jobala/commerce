@@ -1,0 +1,40 @@
+---
+layout: simple
+permalink: "/industries/"
+title: Screen sharing use cases for different industries
+published: false
+---
+<style>
+    .industries .industry {
+        margin-bottom:50px;
+    }
+</style>
+<div class="white-bcg">
+    <div class='row white-bcg'>
+      <div class="col l6 push-l3 s12">
+        <main class="blog-content industries" role="main">
+            <h1>Industries</h1>
+          {% for industry in site.industry_page %}
+          <article class="industry">
+        <div class="entry-content-wrapper clearfix standard-content">
+          <header class="entry-content-header">
+            <h2 class="post-title entry-title" >
+              <a href="{{ site.baseurl | append: industry.url | replace: '//', '/' | replace: ':/', '://' }}" rel="bookmark" title="{{ case.title }}">{{ case.title }}<span class="post-format-icon minor-meta"></span></a>
+            </h2>
+            <span class="post-meta-infos">
+            </span>
+          </header>
+          <div class="entry-content" >
+            {{industry.description}}
+            <br>
+            <a class="read-more" href="{{ site.baseurl | append: industry.url | replace: '//', '/' | replace: ':/', '://' }}" rel="bookmark" title="{{ case.title }}">Read More &#8594;</a>
+          </div>
+        </div>
+          </article>
+          {% endfor %}
+          <!--end content-->
+        </main>
+      </div>
+      <!--end container-->
+    </div>
+  </div>

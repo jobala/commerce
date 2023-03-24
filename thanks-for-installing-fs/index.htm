@@ -1,0 +1,91 @@
+---
+layout: raw
+title: "Thanks for installing CrankWheel"
+description: "CrankWheel Screen Sharing.
+Simplest way to share your screen.
+Enterprise features: White label, audit log and more."
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head-tags.html %}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanks for installing CrankWheel!</title>
+  <link rel="stylesheet" href="/install/css/dashboard_app.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/images/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/images/fav/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/images/fav/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/images/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/images/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/images/fav/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/images/fav/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/images/fav/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/images/fav/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/static/images/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/images/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/fav/favicon-16x16.png">
+  <link rel="manifest" href="/static/images/fav/manifest.json">
+  <link rel="icon" type="image/png" href="/install/cwicon.png">
+  <script type="text/javascript" src="{{ site.baseurl | append: '/static/js/jquery/jqueryc1d8.js?ver=1.11.3' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+  <script type="text/javascript" src="{{ site.baseurl | append: '/static/js/jquery/jquery-migrate.min1576.js?ver=1.2.1' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('set', 'anonymizeIp', true);
+    ga('create', 'UA-63409357-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+<nav>
+    <a href="/"><div class="nav-top">
+        <img class="nav-logo full" alt="CrankWheel logo" src="/install/cwnavlogofull.png">
+    </div></a>
+</nav>
+<main>
+    <div class="hero show">
+        <h1>Thanks for installing!</h1>
+        <h5>You've completed installation. Click the new CrankWheel button near the top-right corner of your browser to get started.</h5>
+		<h5>If you have any questions, please don't hesitate to contact us by emailing <a href="mailto:support@crankwheel.com">support@crankwheel.com</a>.</h5>
+		<h5>We hope you enjoy CrankWheel!</h5>
+    </div>
+
+	<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom-base.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+	<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+</main>
+<div class="first-use-instructions hide" id="show-if-edge">
+	<h4>Click the CrankWheel icon to start screen sharing.</h4>
+    <div class="arrows">
+        <span class="material-icons">keyboard_arrow_up</span>
+        <span class="material-icons">keyboard_arrow_up</span>
+        <span class="material-icons">keyboard_arrow_up</span>
+        <span class="material-icons">keyboard_arrow_up</span>
+    </div>
+</div>
+<div class="first-use-instructions" id="hide-if-edge">
+	<h4 >Pin the CrankWheel icon, then click it any time to start screen sharing.
+		<br/>
+	<a href="https://youtu.be/iUGnYms94-I" target="_blank">>>&nbsp;instructional&nbsp;video</a></h4>
+    <div class="arrows">
+        <span class="material-icons">keyboard_arrow_up</span>
+        <span class="material-icons">keyboard_arrow_up</span>
+        <span class="material-icons">keyboard_arrow_up</span>
+        <span class="material-icons">keyboard_arrow_up</span>
+    </div>
+</div>
+<script>
+var hasChromeOrChromium = (navigator.userAgent.indexOf("Chrome/") != -1 || navigator.userAgent.indexOf("Chromium/") != -1);
+if ((hasChromeOrChromium && navigator.userAgent.indexOf("Edg/") != -1) || (!hasChromeOrChromium && navigator.userAgent.indexOf("Firefox/") != -1)) {
+	document.getElementById('show-if-edge').classList.remove('hide');
+	document.getElementById('hide-if-edge').classList.add('hide');
+}
+</script>
+  {% include body-tags.html %}

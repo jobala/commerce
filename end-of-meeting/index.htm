@@ -1,0 +1,209 @@
+---
+layout: raw
+title: "How did you like that?"
+description: "CrankWheel Screen Sharing.
+Simplest way to share your screen.
+Enterprise features: White label, audit log and more."
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head-tags.html %}
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Want CrankWheel for free?</title>
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dooinopjfnhlmmdkdepajfipfhlcmjgp">
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/images/fav/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/images/fav/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/fav/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/images/fav/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/fav/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/images/fav/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/images/fav/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/images/fav/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/images/fav/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/static/images/fav/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/images/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/images/fav/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/images/fav/favicon-16x16.png">
+	<link rel="manifest" href="/static/images/fav/manifest.json">
+	<link rel="icon" type="image/png" href="cwicon.png">
+
+	<link rel="stylesheet" id="style-book" href="{{ site.baseurl | append: '/static/redesign/materialize/css/materialize.css' | replace: '//', '/' | replace: ':/', '://' }}" type="text/css" media="all" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<style>
+	    /* latin-ext */
+	@font-face {
+	  font-family: 'Lato Light';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-display: swap;
+	  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Lato Light';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-display: swap;
+	  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-display: swap;
+	  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-display: swap;
+	  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 400;
+	  font-display: swap;
+	  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 400;
+	  font-display: swap;
+	  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
+	<!-- end of BRAND FONTS & ICONS -->
+
+	<link rel="stylesheet" href="css/dashboard_app.css">
+	<link rel="stylesheet" id="style-book" href="{{ site.baseurl | append: '/static/redesign/style-book.css' | replace: '//', '/' | replace: ':/', '://' }}" type="text/css" media="all" />
+	<link rel="stylesheet" id="style-book" href="{{ site.baseurl | append: '/end-of-meeting/css/main.css' | replace: '//', '/' | replace: ':/', '://' }}" type="text/css" media="all" />
+
+
+	<script src="https://www.googleoptimize.com/optimize.js?id=OPT-MS34D2P"></script>
+	<script type="text/javascript"
+		src="{{ site.baseurl | append: '/static/js/jquery/jqueryc1d8.js?ver=1.11.3' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+	<script type="text/javascript"
+		src="{{ site.baseurl | append: '/static/js/jquery/jquery-migrate.min1576.js?ver=1.2.1' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+	<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom-base.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+	<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+</head>
+
+<body>
+	<section id="b-section">
+		<main>
+			<nav>
+				<div class="container">
+					<div class="row">
+						<div class="nav-top col s12">
+							<a href="https://crankwheel.com">
+								<img class="nav-logo full" alt="CrankWheel logo" src="cwnavlogofull.png">
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<article>
+				<div class="container flex-column justify-center">
+					<div class="row">
+						<div class="col s12">
+							<h1>3 steps to share your screen with ease</h1>
+							<ol class="howto">
+								<li><span>Set up CrankWheel in your browser (it only takes 10 seconds).</span></li>
+								<li><span>Next time you are on a call, click the CrankWheel icon and select what you want to share.</span></li>
+								<li><span>Say <b>"Let me just show you"</b> and send a link to an email address or with an SMS. The link can be opened in any browser or in a smartphone.</span></li>
+							</ol>
+							<h6><strong>Would you like to use CrankWheel for yourself?</strong></h6>
+						</div>
+					</div>
+				</div>
+				<div class="light-grey-bcg">
+					<div class="container">
+						<div class="row">
+							<div class="col s12">
+								<h6 class="mb-2"><strong>CrankWheel gives you:</strong></h6>
+								<div class="flex-row justify-between">
+									<div class="flex-column">
+										<div class="mb-2"><i class="fa fa-check"></i>Visual elements to calls</div>
+										<div><i class="fa fa-check"></i>Easy Screen-sharing&nbsp;</div>
+									</div>
+									<div class="flex-column">
+										<div class="mb-2"><i class="fa fa-check"></i>No installation for viewers</div>
+										<div><i class="fa fa-check"></i>Remote control feature</div>
+									</div>
+									<div class="flex-column">
+										<div class="mb-2"><i class="fa fa-check"></i>More engagement</div>
+										<div><i class="fa fa-check"></i>Onboarding possibilities</div>
+									</div>
+									<div class="flex-column">
+										<div class="mb-2"><i class="fa fa-check"></i>Screen sharing to any browser, any device</div>
+										<div><i class="fa fa-check"></i>No friction</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container flex-column justify-center">
+					<div class="row">
+						<div class="col s12">
+							<h6 class="center-align"><strong>Click below to start using CrankWheel today.</strong></h6>
+							<div class="button-group center-align">
+								<button type="submit" class="btn-large primary black-text" onclick="buttonClick()">Try CrankWheel for free</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		</main>
+	</section>
+</body>
+
+<!-- GrowSumo -->
+<script type='text/javascript'>if (shouldIncludeGrowsumoCode()) { (function() {var gs = document.createElement('script');gs.src = 'https://snippet.growsumo.com/growsumo.min.js';gs.type = 'text/javascript';gs.async = 'true';gs.onload = gs.onreadystatechange = function() {var rs = this.readyState;if (rs && rs != 'complete' && rs != 'loaded') return;try {growsumo._initialize('pk_Q7s39I1COQIhEfbdCITeDSqgsdjyWlHe');if (typeof(growsumoInit) === 'function') {growsumoInit();}} catch (e) {}};var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gs, s);})(); }</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('set', 'anonymizeIp', true);
+ga('create', 'UA-63409357-1', 'auto');
+ga('set', 'campaignMedium', 'referral');
+ga('set', 'campaignSource', 'crankwheel');
+ga('set', 'campaignName', 'endofmeeting');
+ga('send', 'pageview');
+
+// Directly set the reff cookie, as post-meeting is never some other campaign.
+var reff = 'referral|crankwheel|endofmeeting|';
+createCookie('__cw_utms', reff, 30);
+
+// This function name needs to stay, due to GrowSumo integration.
+function buttonClick() {
+  doSignupLink();
+}
+</script>
+  {% include body-tags.html %}
+</body>
+
+</html>

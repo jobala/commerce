@@ -1,0 +1,146 @@
+.b-crankwheel {
+	border-top: 1px solid @brd_c;
+
+	.g-header {
+		margin-bottom: 0;
+	}
+
+	&__header {
+		padding: @m_vertical-block 0;
+		background-color: @gray-lightest;
+
+		._mx_md-mobile({
+			padding: @m_vertical-block_mb 0;
+		});
+	}
+
+	&__list {
+		height: 320px;
+		color: @white;
+
+		._mx_inline(~'li');
+
+		._mx_md-mobile({
+			height: auto;
+		});
+
+		._mx_e-headings({
+			color: @white;
+		});
+
+		._mx_e-h3({
+			margin-bottom: 16px;
+			font-weight: 400;
+			text-transform: uppercase;
+		});
+
+		> li {
+			@w-decor: 130px;
+
+			display: inline-table !important;
+			height: 100%;
+			text-align: center; // to align inside block
+
+			._mx_valign_table(@w: 33.333%);
+
+			._mx_md-mobile({
+				width: 100%;
+				text-align: left;
+			});
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				position: relative;
+
+				&:before {
+
+					content: '';
+
+					position: absolute;
+					top: 0;
+					right: -@w-decor;
+
+					width: @w-decor;
+					height: 320px;
+
+					._mx_sprite();
+
+					._mx_md-mobile({
+						display: none;
+					});
+				}
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				padding-left: @w-decor;
+
+				._mx_md-mobile({
+					padding: 0;
+				});
+			}
+
+			&:nth-child(1) {
+				z-index: 3;
+				background-color: @brand-warning;
+
+				&:before {
+					background-position: 0 -50px;
+				}
+			}
+
+			&:nth-child(2) {
+				z-index: 2;
+				background-color: spin(@brand-warning, 3%);
+
+				&:before {
+					background-position: -150px -50px;
+				}
+			}
+
+			&:nth-child(3) {
+				z-index: 1;
+				background-color: spin(@brand-warning, 6%);
+			}
+
+			.e-info {
+				display: inline-block;
+				padding: 0 @m-col;
+				text-align: left;
+
+				._mx_md-mobile({
+					padding: 30px @p_horiz_mb;
+				});
+
+				> .e-list {
+					opacity: .8;
+
+					> li {
+						position: relative;
+						padding-left: 15px;
+						line-height: 1.35;
+
+						&:before {
+							content: '';
+
+							position: absolute;
+							top: 11px;
+							left: 0;
+
+							width: 5px;
+							height: 5px;
+
+							border-radius: 50%;
+
+							background-color: @white;
+						}
+
+						+ li {
+							margin-top: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head-tags.html %}
+    <!-- Meta information: title, description, opengraph, twittercard -->
+    {% include redesign-meta.html %}
+    {% include head-src.html %}
+
+    <!-- Head assets: css, js, fonts -->
+    {% include redesign-head.html %}
+    {% include simple-head.html %}
+  </head>
+  <body>
+    <div>
+      {% include redesign-header.html %}
+      {% assign source = page.resources %}
+      {% include tiles.html list=source title=page.title description=page.description show_pinned=page.show_pinned pinned_title=page.pinned_title list_title=page.list_title category=page.category show_date=page.show_date %}
+      <div class="light-grey-bcg section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col s12 m10 offset-m1">
+              {{content}}
+            </div>
+          </div>
+        </div>  
+      </div>
+      {% include redesign-footer.html %}
+    </div>
+  {% include body-tags.html %}
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "{351ac452-24d1-40a6-b202-55a03c28ab65}": {
+      "updates": [
+        {
+          "version": "6.0.0.0",
+          "update_link": "https://crankwheel.com/ff_beta/crankwheel_ff_beta.xpi"
+        }
+      ]
+    }
+  }
+}
+

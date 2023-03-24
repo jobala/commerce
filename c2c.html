@@ -1,0 +1,25 @@
+---
+layout: raw
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ page.html_class }}">
+	<head>
+		<!-- Meta information: title, description, opengraph, twittercard -->
+		{% include head-meta.html %}
+
+		<!-- Head assets: css, js, fonts -->
+		{% include head-src.html %}
+
+		<link rel="mask-icon" href="/lp/safari-pinned-tab.svg" color="#fcb42e">
+		<link rel="stylesheet" href="/dist/css/all.min.css">
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Give us one second to load scripts, send back to Google Analytics etc. -->
+		<meta http-equiv="refresh" content="1;URL='/'" />
+	</head>
+	<body id="top" class="{{ page.body_class }}">
+		Redirecting...
+	</body>
+</html>

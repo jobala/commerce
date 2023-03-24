@@ -1,0 +1,37 @@
+
+{% for column in include.columns %}
+<div class="col s12 {% if column.testimonial != true %}{{column.flex}} {{column.center}}{% endif %} {% if include.columns.size < 3 %}offset-m2{% endif %} {% if include.columns.size == 1 %}m8{% elsif include.columns.size >= 2 %}m4{%endif%}">
+  {% if column.title %}<div class="text-center"><{{ include.heading_tag | default: "h2" }}><strong>{{ include.title }}</strong></{{ include.heading_tag | default: "h2" }}></div>{% endif %}
+  {% if column.testimonial %}
+  <div class="row section shadow-container py-3">
+    {% assign img_src = column.image | strip %}
+    {% if column.image and img_src != "" %}
+    <div class="col s12 m12 l3 {{column.flex}} {{column.center}}">
+      <div class="testimonial-person">
+        <img class="rounding yellow-border" src="{{column.image}}" alt="{{column.image_alt}}" {% if column.image_max_width %}style="max-width: {{column.image_max_width}};"{% endif %}>
+      </div>
+    </div>
+    {% endif %}
+    <div class="col s12 m12 {% if column.image and img_src != '' %}l9{% else %}l10 offset-l1{% endif %}">
+      <div class="quote-bg yellow-mark line-height-2X">
+        <h5><strong>{{ include.subtitle }}</strong></h5>
+        {{ column.content | markdownify }}
+        <strong>{{ include.quote_author }}</strong>
+      </div>
+    </div>
+  </div>
+  {% else %}
+    {% if column.image %}
+      <img src="{{column.image}}" alt="{{column.image_alt}}" {% if column.image_max_width %}style="max-width: {{column.image_max_width}};"{% endif %}>
+    {% endif %}
+    {{ column.content | markdownify }}
+  {% endif %}
+  {% assign button_text = include.button | strip %}
+
+  {% if button_text != "" %}
+  <div class="buttonblock">
+    <a href="https://meeting.is/ss/showu/demo/default#crankwheel-com-showu-launch-button" class="btn-large primary">{{column.button }}</a>
+  </div>
+  {% endif %}
+</div>
+{% endfor %}

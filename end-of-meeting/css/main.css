@@ -1,0 +1,120 @@
+html, body, main{
+	width:100%;height:100%;
+}
+#b-section main{
+	display:flex;
+	flex-direction: column;
+	border:0;
+	max-width: inherit;
+	padding:inherit;
+	background: #FFFFFF;
+}
+#b-section main > * {flex-grow:1;}
+#b-section main > nav{ flex-grow:0; }
+
+#b-section article{ display:flex;flex-direction: column;margin:0; }
+#b-section article > *{flex-grow: 1;}
+#b-section article > *.grow-2{flex-grow:2;}
+#b-section article > *.grow-3{flex-grow:3;}
+#b-section article > *.grow-4{flex-grow:4;}
+#b-section article > *.grow-5{flex-grow:5;}
+
+#b-section article ol {
+font-weight: bold;
+}
+
+#b-section article ol > li > * {
+font-weight: normal;
+}
+
+#b-section .flex-column, #b-section  .flex-row{
+	display:flex;
+	flex-direction: column;
+}
+#b-section .flex-column.justify-center{
+	justify-content: center;
+}
+#b-section .flex-column.justify-end{
+	justify-content: flex-end;
+}
+#b-section .flex-column.justify-start{
+	justify-content: flex-start;
+}
+@media (min-width: 600px){
+	#b-section .flex-row{
+		display: flex;
+		flex-direction: row;
+	}
+	#b-section .flex-row.justify-center{ justify-content: center;}
+	#b-section .flex-row.justify-end{ justify-content: end;}
+	#b-section .flex-row.justify-start{ justify-content: start;}
+	#b-section .flex-row.justify-between{ justify-content: space-between;}
+	#b-section .mb-2{ margin-bottom:1.2em;}
+}
+
+#b-section .howto{
+	border:1px solid black;
+	padding:20px 35px;
+	margin-bottom:20px;
+}
+#b-section .howto > *{	margin-bottom:10px;}
+#b-section .howto > *:last-child{	margin-bottom:0px;}
+#b-section .row{margin-bottom:0;}
+
+#b-section h1{margin-top:20px;}
+
+#a-section,#b-section,#b-section main{width:100vw;min-height:100vh;}
+#b-section{ display:inherit; }
+
+#a-section h1, #a-section h2, #a-section h3, #a-section h4, #a-section h5, #a-section h6 {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: normal;
+	margin: 1.4em 0 .8em 0; }
+
+#a-section h1 {
+	font-weight: 200;
+	font-size: 2.8em;
+	line-height: 1.2em; }
+
+#a-section h2 {
+	font-weight: 200;
+	font-size: 2.25em;
+	line-height: 1.25em; }
+
+#a-section h3 {
+	font-weight: 300;
+	font-size: 1.75em;
+	line-height: 1.25em; }
+
+#a-section h4 {
+	font-weight: 300;
+	font-size: 1.4em;
+	line-height: 1.25em; }
+
+#a-section h5 {
+	font-weight: 400;
+	font-size: 1.125em;
+	line-height: 1.35em; }
+
+#a-section h6 {
+	font-weight: 400;
+	font-size: .8em;
+	line-height: 1.2em; }
+.nav-top{
+	max-height: 100%;
+}
+#b-section nav .nav-top .nav-logo{
+    margin:0;
+}
+nav .container, nav .container .row, nav .container .row .nav-top{
+    height:100%;
+}
+nav .nav-top > a{
+	height:40px;
+	margin-left:0;
+}
+@media (orientation: portrait) and (max-width:500px) {
+	.btn-large{
+		padding: 2rem 2.6rem !important;
+	}
+}

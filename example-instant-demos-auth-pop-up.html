@@ -1,0 +1,70 @@
+---
+layout: raw
+title: "Example of popping up Instant Demos authorization and handling response"
+description: "CrankWheel Screen Sharing.
+Simplest way to share your screen.
+Enterprise features: White label, audit log and more."
+---
+<html>
+<head>
+    {% include head-tags.html %}
+<style>
+body {
+	margin: 0;
+}
+
+.public-link-iframe {
+	display: block;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<title> Example of popping up Instant Demos authorization and handling response </title>
+
+
+</head>
+<body>
+	This web page shows an example of how you can use the Instant Demos authorization pop-up API. View its source to see how it works. Click the below button to initiate an authorization flow.
+	<br/>
+	<button onclick="showPopup()">Connect to my CrankWheel account</button>
+
+<script>
+function showPopup() {
+	// The 'token' parameter is simply echoed back to you in the message returned below.
+	// Set it to whatever you want.
+	//
+	// The 'displayname' parameter is shown in the following context in the authorization pop-up:
+	// "DISPLAYNAME would like to connect with Instant Demos on your CrankWheel account."
+	window.open(
+		"https://meeting.is/ss/instant_demo/request_snippet?token=12345&displayname=Example",
+		'CrankWheel',
+		'location=0,status=0,width=640,height=480');
+}
+
+window.addEventListener('message', function(e) {
+	// A response from CrankWheel always starts with 'closeFrame:'
+	//
+	// The response is that only (nothing after the colon) if access was not granted.
+	//
+	// If access is granted, it is a JSON string with fields as shown below.
+	if (e.data.startsWith('closeFrame:')) {
+		var response = e.data.substr(e.data.search(":") + 1);
+		e.source.close();
+		if (response == '') {
+			alert('Got response indicating access was not permitted.');
+		} else {
+			var result = JSON.parse(response);
+			alert(
+				'Token (as set when opening pop-up: ' + result.token + '\n' +
+				'Demo ID: ' + result.demo_id + '\n' +
+				'Campaign URL: ' + result.campaign_url + '\n' +
+				'Full JavaScript snippet: ' + result.snippet
+			);
+		}
+	}
+});
+</script>
+  {% include body-tags.html %}
+</body>
+</html>

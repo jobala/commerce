@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "{e3ce9475-3945-4b5e-bd76-d3efeea4d722}": {
+      "updates": [
+        {
+          "version": "6.0.0.0",
+          "update_link": "https://crankwheel.com/ff_staging/crankwheel_ff_staging.xpi"
+        }
+      ]
+    }
+  }
+}
+

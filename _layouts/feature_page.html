@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head-tags.html %}
+    <!-- Meta information: title, description, opengraph, twittercard -->
+    {% include redesign-meta.html %}
+    {% include head-src.html %}
+
+    <!-- Head assets: css, js, fonts -->
+    {% include redesign-head.html %}
+    {% include simple-head.html %}
+    <!-- Custom CSS -->
+    {% if page.css %}
+    <style>
+    {{ page.css }}
+    </style>
+    {% endif %}
+  </head>
+  <body>
+    <div>
+      {% include redesign-header.html %}
+
+      {% include hero-highlight.html title=page.hero_title subtitle=page.hero_subtitle description=page.hero_description list=page.hero_reasons image=page.hero_image button_text=page.hero_button_text button_url=page.button_url container_type=page.container_type %}
+
+      {% include feature-section.html title=page.section_title subtitle=page.section_subtitle used_by=page.used_by features=page.features container_type=page.container_type %}
+
+      {% include landing_feature_content.html container_type=page.container_type %}
+
+      {% include redesign-footer.html %}
+    </div>
+  {% include body-tags.html %}
+  </body>
+</html>

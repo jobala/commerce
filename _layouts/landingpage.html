@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ page.html_class }}">
+	<head>
+    {% include head-tags.html %}
+		<!-- Meta information: title, description, opengraph, twittercard -->
+		{% include head-meta.html %}
+
+		<!-- Head assets: css, js, fonts -->
+		{% include head-src.html %}
+
+		<link rel="mask-icon" href="/lp/safari-pinned-tab.svg" color="#fcb42e">
+		<link rel="stylesheet" href="/dist/css/all.min.css">
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="top" class="{{ page.body_class }}">
+		{{ content }}
+
+		{% include body-src.html %}
+
+		<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/lp_form_submit.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+  {% include body-tags.html %}
+	</body>
+</html>

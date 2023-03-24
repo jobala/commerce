@@ -1,0 +1,79 @@
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head-tags.html %}
+    <!-- Meta information: title, description, opengraph, twittercard -->
+    {% include head-meta.html %}
+    {% include head-src.html %}
+
+    <!-- Head assets: css, js, fonts -->
+    {% include redesign-head.html %}
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"ca15af92940b4a11aea2e73fa","lid":"3d7e89aaeb"}) })</script>
+  </head>
+  <body>
+    <div class="{% if page.bgclass %}{{ page.bgclass }}{% else %}{{ 'default' }}{% endif %}">
+      {% include redesign-header.html %}
+      <!-- <div id='wrap_all'> -->
+      <!-- Site header -->
+      <div class='row white-bcg'>
+        <div class="col l6 push-l3 s12">
+	  <main class='content units av-content-full alpha  av-blog-meta-comments-disabled av-blog-meta-category-disabled av-blog-meta-html-info-disabled av-blog-meta-tag-disabled' role="main"  >
+	    <article class='post-entry post-entry-type-standard post-loop-1 post-parity-odd post-entry-last single-big post type-post status-publish format-standard hentry category-funding tag-ecosystem tag-funding tag-iceland tag-startups'   >
+	      <div class='blog-meta'></div>
+	      <header class="entry-content-header">
+		<h1 class='post-title entry-title' >{{ page.title }}
+		  <span class='post-format-icon minor-meta'></span>
+		</h1>
+		<span class='post-meta-infos'>
+		  <time class='date-container minor-meta updated' datetime="{{ page.date | date: '%Y-%m-%d' }}" >{{ page.date | date: '%B %d, %Y' }}</time>
+		  <span class='text-sep text-sep-date'>/</span>
+		  <span class="blog-author minor-meta">by
+		    <span class="entry-author-link" >
+		      <span rel="author"> {% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</span>
+		    </span>
+		  </span>
+		</span>
+	      </header>
+	      <div class="entry-content" >
+		<!-- Post content -->
+		{{ content }}
+	      </div>
+	      <div class='post_delimiter'></div>
+	    </article>
+	    <!-- Comments-->
+	    {% if site.disqus_code %}
+	    {% if page.comments %}
+	    <div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	     var disqus_shortname = '{{site.disqus_code}}'; // required: replace example with your forum shortname
+	     /* * * DON'T EDIT BELOW THIS LINE * * */
+	     (function() {
+	       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	     })();
+	    </script>
+	    {% endif %}
+	    {% endif %}
+	    <!--end content-->
+	  </main>
+      </div>
+    </div>
+    </div>
+    <!--end container-->
+    </div>
+
+    <!-- Site footer -->
+    {% include redesign-footer.html %}
+    </div>
+
+    <a href="#top" title="Scroll to top" id="scroll-top-link" data-av_icon="" data-av_iconfont="entypo-fontello"><span class="avia_hidden_link_text">Scroll to top</span></a>
+
+    <div id="fb-root"></div>
+
+    <!-- Body assets: css, js -->
+    {% include body-src.html %}
+    <!-- {% include drakkar-body-src.html %} -->
+  {% include body-tags.html %}
+  </body>
+</html>

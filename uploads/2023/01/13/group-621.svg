@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="137.32" height="116.267" viewBox="0 0 137.32 116.267">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.31" y1="-0.461" x2="1.007" y2="1.101" gradientUnits="objectBoundingBox">
+      <stop offset="0.24" stop-color="#fff"/>
+      <stop offset="0.658" stop-color="#f9c228"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_621" data-name="Group 621" transform="translate(247.952 -598.478)">
+    <path id="Path_53" data-name="Path 53" d="M-177.241,690.566H-204.8l4.594-21.437h18.374Z" transform="translate(11.73 19.32)" fill="#fff" stroke="#000" stroke-width="1.3"/>
+    <path id="Rectangle_13" data-name="Rectangle 13" d="M-235.818,599.128h113.053a11.436,11.436,0,0,1,11.484,11.484v74.135a11.436,11.436,0,0,1-11.484,11.484H-235.818A11.436,11.436,0,0,1-247.3,684.747V610.612A11.436,11.436,0,0,1-235.818,599.128Z" transform="translate(0)" fill="#fff" stroke="#000" stroke-width="1.3"/>
+    <path id="Path_845" data-name="Path 845" d="M-247.3,662.23v4.975a11.436,11.436,0,0,0,11.484,11.484h113.053a11.436,11.436,0,0,0,11.484-11.484V662.23Z" transform="translate(0 17.416)" fill="#fff" stroke="#000" stroke-width="1.3"/>
+    <path id="Rectangle_14" data-name="Rectangle 14" d="M-207.322,685.029h35.473a2.616,2.616,0,0,1,2.68,2.678h0a2.616,2.616,0,0,1-2.68,2.68h-35.473a2.617,2.617,0,0,1-2.68-2.68h0A2.7,2.7,0,0,1-207.322,685.029Z" transform="translate(10.294 23.708)" fill="#fff" stroke="#000" stroke-width="1.3"/>
+    <g id="Group_620" data-name="Group 620" transform="translate(-203.705 615.904)">
+      <circle id="Ellipse_117" data-name="Ellipse 117" cx="10.279" cy="10.279" r="10.279" transform="translate(14.135 14.134)" fill="url(#linear-gradient)"/>
+      <g id="Group_619" data-name="Group 619">
+        <path id="Path_846" data-name="Path 846" d="M-213.135,627.188V612.275h14.913" transform="translate(213.135 -612.275)" fill="none" stroke="#000" stroke-width="1.3"/>
+        <path id="Path_847" data-name="Path 847" d="M-186.556,612.275h14.913v14.913" transform="translate(220.471 -612.275)" fill="none" stroke="#000" stroke-width="1.3"/>
+        <path id="Path_848" data-name="Path 848" d="M-171.643,638.853v14.913h-14.913" transform="translate(220.471 -604.94)" fill="none" stroke="#000" stroke-width="1.3"/>
+        <path id="Path_849" data-name="Path 849" d="M-198.222,653.766h-14.913V638.853" transform="translate(213.135 -604.94)" fill="none" stroke="#000" stroke-width="1.3"/>
+      </g>
+    </g>
+  </g>
+</svg>

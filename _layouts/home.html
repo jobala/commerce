@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head-tags.html %}
+    <!-- Meta information: title, description, opengraph, twittercard -->
+    {% include redesign-meta.html %}
+    {% include head-src.html %}
+
+    <!-- Head assets: css, js, fonts -->
+    {% include redesign-head.html %}
+  </head>
+  <body>
+    <div class="default">
+      {% include redesign-header.html %}
+      {{ content }}
+      {% include featureshome.html %}
+      {% include call-to-action.html %}
+      {% include redesign-footer.html %}
+    </div>
+  {% include body-tags.html %}
+  </body>
+</html>

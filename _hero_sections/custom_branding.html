@@ -1,0 +1,17 @@
+---
+layout: raw
+container_type: container-fluid
+name: custom_branding
+hero_title: Custom branding options
+hero_subtitle: It’s simple to integrate your brand into CrankWheel appointments
+description: CrankWheel makes it possible for you to customise various touchpoints of the CrankWheel experience.
+hero_image: "/static/images/hero-ill.png"
+button_text: GET A DEMO
+hero_reasons:
+- description: Post-session landing page
+- description: Public URL for the meeting lobby
+- description: Deliver inbound leads instantly to a screen share
+- description: Customizable email and SMS templates
+- description: White labeling available to enterprise customers
+---
+{% include hero-highlight.html title=page.hero_title subtitle=page.hero_subtitle description=page.description list=page.hero_reasons image=page.hero_image button_text=page.button_text button_url=page.button_url container_type=page.container_type %}

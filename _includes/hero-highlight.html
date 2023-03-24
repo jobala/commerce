@@ -1,0 +1,33 @@
+<div class="light-grey-bcg section hero">
+    <div class="{{include.container_type | default: 'container-fluid' }}">
+        <div class="row">
+            <div class="col {{include.column_class | default: 's12 m10 offset-m1 l8 offset-l2' }}">
+                <div data-component="hero-highlight">
+                    <div class="hero-text">
+
+                        <h1><strong>{{include.title | newline_to_br}}</strong></h1>
+
+                        <h4><strong>{{include.subtitle  | newline_to_br}}</strong></h4>
+                        
+                        <p>{{include.description | newline_to_br}}</p>
+                        {% if include.list %}
+                        <ul>
+                            {% for item in include.list %}
+                            <li>
+                                {% include checkmark %}
+                                <span class="small">{{item.description | newline_to_br}}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                        {% if include.button_text %}
+                            <a class="btn primary" role="button" {% if include.button_url and include.button_url != "" %}href="{{include.button_url}}"{% else %}data-schedule-demo{% endif %}>{{include.button_text}}</a>
+                        {% endif %}
+                    </div>
+                    <img class="limit-width limit-height" src="{{include.image}}" alt="{{ include.image_alt || default: 'hero image' }}">    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

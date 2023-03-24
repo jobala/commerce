@@ -1,0 +1,33 @@
+---
+label: Resources
+hide_body: false
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: resources
+- name: title
+  label: Title
+  hidden: false
+  type: textarea
+- name: description
+  label: Description
+  hidden: false
+  type: textarea
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- type: blocks
+  name: resources
+  label: Resources
+  hidden: false
+  template_types:
+  - tile
+pages:
+- resources-for-digital-marketing-sales.md
+- resources-for-insurance-agents.md
+- resources-for-remote-sales-agents.md
+- resources-for-solar-sales.md
+- resources.html

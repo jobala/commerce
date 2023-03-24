@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+body {
+	margin: 0;
+}
+
+.public-link-iframe {
+	display: block;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<title> Basic example of a white-label (embedding) public link page where the iframe covers the whole viewport </title>
+
+
+</head>
+<body>
+
+	<!--
+		A drawback with this style of embedding is that the viewport does not
+		update correctly on the presenter end.
+	-->
+
+	<iframe id="crankwheel-frame" class="public-link-iframe" src="about:blank"></iframe>
+
+	<script>
+function crankwheelBindEvent(element, eventName, eventHandler) {
+  if (element.addEventListener){
+    element.addEventListener(eventName, eventHandler, false);
+  } else if (element.attachEvent) {
+    element.attachEvent('on' + eventName, eventHandler);
+  }
+}
+
+crankwheelBindEvent(window, 'message', function (e) {
+  var msg = e.data;
+  if (msg.type == 'cw.session.ended') {
+    window.location.href = msg.post_session_url;
+  }
+});
+
+var crankwheelAccountUrl = 'https://meeting.is/cw';
+document.getElementById('crankwheel-frame').src = crankwheelAccountUrl + document.location.search;
+	</script>
+</body>
+</html>

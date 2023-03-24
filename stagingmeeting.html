@@ -1,0 +1,37 @@
+---
+layout: raw
+title: "CrankWheel Meeting"
+description: "CrankWheel Screen Sharing.
+Simplest way to share your screen.
+Enterprise features: White label, audit log and more."
+---
+<html>
+<head>
+    {% include head-tags.html %}
+<style>
+body {
+	margin: 0;
+}
+
+.public-link-iframe {
+	display: block;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<title> CrankWheel Meeting </title>
+
+</head>
+<body>
+	<iframe id="crankwheel-frame" class="public-link-iframe" src="https://cwstaging.org/cw"></iframe>
+
+	<script>
+var crankwheelAccountUrl = 'https://cwstaging.org/cw';
+if (document.location.search) {
+	window.location.href = crankwheelAccountUrl + document.location.search;
+}
+	</script>
+  {% include body-tags.html %}
+</body>
+</html>

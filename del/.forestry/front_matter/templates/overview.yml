@@ -1,0 +1,47 @@
+---
+label: Overview
+hide_body: false
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: overview
+- name: permalink
+  label: Permalink
+  default: false
+  hidden: false
+  type: text
+- name: title
+  label: Title
+  hidden: false
+  type: textarea
+- name: description
+  label: Description
+  hidden: false
+  type: textarea
+- name: show_pinned
+  label: Show Pinned
+  hidden: false
+  type: boolean
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- type: select
+  name: content_type
+  label: Content Type
+  description: content type used in the overview page
+  hidden: false
+  required: true
+  default: feature_page
+  config:
+    source:
+      type: custom
+    options:
+    - case_studies
+    - feature_page
+    - posts
+    - industry_page
+pages:
+- features.html

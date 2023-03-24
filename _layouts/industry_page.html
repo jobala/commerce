@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head-tags.html %}
+    <!-- Meta information: title, description, opengraph, twittercard -->
+    {% include redesign-meta.html %}
+    {% include head-src.html %}
+
+    <!-- Head assets: css, js, fonts -->
+    {% include redesign-head.html %}
+    {% include simple-head.html %}
+    <!-- Custom CSS -->
+    <style>
+    {{ page.css }}
+    </style>
+    <style>
+        .hero-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .hero-image{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-image .img-wrapper{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .hero-text h1{ margin-top:0px; }
+        .hero-text p{ margin-bottom:0px; }
+        .hero-text, .hero-image{
+            flex-grow: 1;
+            flex-basis: 50%;
+        }
+        @media (min-width:1420px) {
+            .hero-text, .hero-image{
+                height: 28vh;
+            }
+        }
+        @media (min-width:1920px) {
+            .hero-text, .hero-image{
+                height: 22vh;
+            }
+        }
+        .hero{
+            display: flex;
+            flex-direction: row;
+        }
+        .section.icons .row{
+            margin-bottom:30px;
+        }
+        .section.icons .row:last-child{
+            margin-bottom:0;
+        }
+        .light-grey-bcg{
+            z-index: -2;
+            position: relative;
+        }
+    </style>
+    <style>
+        .btn-signup {
+        padding-top: 11px !important;
+        border-radius: 0px !important;
+        background-color: #f6b333;
+        text-align: center;
+        padding: 10px 20px !important;
+        border: 0px !important;
+        width: 100%;
+        margin-bottom: 20px;
+        }
+        .btn-signup a {
+        color: white !important;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 24px !important;
+        font-weight: normal !important;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      {% include redesign-header.html %}
+      <div class="light-grey-bcg section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 offset-m2 hero">
+                    <div class="hero-text">
+                        <h1><b>{{page.highlight_title}}</b></h1>
+                        <h6>
+                            <b>"{{page.highlight_description}}"</b>
+                        </h6>
+                    </div>
+                    <div class="text-center hero-image">
+                        <span class="img-wrapper">
+                            <img class="limit-width limit-height" src="{{site.baseurl | append: page.hero_image | replace: '//', '/' | replace: ':/', '://'}}" alt="simpler_any-browser-any-device">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2">
+                        {{ page.main | markdownify }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="light-grey-bcg section icons">
+            <div class="container">
+                    {% for item in page.icons %}
+
+                        {% capture mod %}{% cycle "odd", "even" %}{% endcapture %}
+
+                        {% if mod == "odd" %}
+                            <div class="row">
+                            <div class="col s0 m2"></div>
+                        {% endif %}
+
+                        <div class="col s12 m4 text-center">
+                            <img src="{{site.baseurl | append: item.image | replace: '//', '/' | replace: ':/', '://'}}" alt="{{item.alt}}">
+                            <h6><b>{{item.title}}</b></h6>
+                        </div>
+
+                        {% if mod == "even" or item == page.benefits.last %}
+                            </div>
+                        {% endif %}
+                        
+                    {% endfor %}
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                    {% for item in page.benefits %}
+
+                    {% capture mod %}{% cycle "odd", "even" %}{% endcapture %}
+                    {% if mod == "odd" %}
+                        <div class="row">
+                        <div class="col s0 m2"></div>
+                    {% endif %}
+
+                    <div class="col s12 m4">
+                        <h6>
+                            <b>{{item.title}}</b>
+                        </h6>
+                        <p>
+                            {{item.description}}
+                        </p>
+                    </div>
+
+                    {% if mod == "even" or item == page.benefits.last %}
+                        </div>
+                    {% endif %}
+
+                    {% endfor %}
+            </div>
+        </div>
+
+        <div class="section half-size">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m4 offset-m4">
+                        <div class="btn-signup"><a style="cursor: pointer;" class="crankwheel-com-showu-launch-button">Book a demo</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section half-size">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2">
+                        <h3><b>Features:</b></h3>
+                    </div>
+                </div>
+                {% for item in page.features %}
+
+                    {% capture mod %}{% cycle "odd", "even" %}{% endcapture %}
+
+                    {% if mod == "odd" %}
+                        <div class="row">
+                        <div class="col s0 m2"></div>
+                    {% endif %}
+
+                    <div class="col s12 m4">
+                        <h6><b>{{item.title}}</b></h6>
+                        <p>{{item.description}}</p>
+                    </div>
+
+                    {% if mod == "even" or item == page.benefits.last %}
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m4 offset-m4">
+                        <div class="buttonblock">
+                            <a href="https://meeting.is/ss/signup#email" class="btn-large primary">Try CrankWheel for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {% include redesign-footer.html %}
+    </div>
+  {% include body-tags.html %}
+  </body>
+</html>

@@ -1,0 +1,48 @@
+{% assign item = include.item %}
+<div class="col {{include.column_class | default: 's12 m6 l4' }}">
+    <a href="{{item.url}}" data-tile>
+
+        {% assign hero_image = item.hero_image | strip %}
+        {% assign thumbnail = item.thumbnail | strip %}
+        {% assign hero_image_obj = item.hero.[0].image | default: item.hero.[0].hero_image | strip %}
+        {% assign image = thumbnail | default: hero_image | default: hero_image_obj %}
+        {% assign extension = image | slice: -3, 3 %}
+        {% capture mime_type %}
+            {% if extension == "svg" %}
+                {{extension}}+xml
+            {% elsif extension == "peg" or extension == "jpg" %}
+                jpeg
+            {% elsif extension == "vif" %}
+                avif
+            {% else %}
+                {{extension}}
+            {% endif %}
+        {% endcapture %}
+        <img class="limit-width limit-height with-fallback" src="{{ image }}" alt="{{ item.hero_image_alt || default: item.alt }}" loading="lazy" >
+
+        <h5><strong>{{item.menu_label | default: item.title}}</strong></h5>
+        <section>
+            {% if item.date and include.show_date %}
+            <span class="post-meta-infos">
+                <time class="date-container minor-meta updated" datetime="{{ item.date | date: '%Y-%m-%d' }}" >
+                    {{ item.date | date: '%B %d, %Y' }}
+                </time>
+                <span> / </span>
+                <span class="blog-author minor-meta">
+                    by <span class="entry-author-link" >
+                        {% if item.author %}
+                            {{ item.author }}
+                        {% else %}
+                            {{ site.author.name }}
+                        {% endif %}
+                    </span>
+                </span>
+            </span>
+            {% endif %}
+            {% if item.subtitle or item.hero_subtitle %}<p><strong>{{ item.subtitle | default: item.hero_subtitle }}</strong></p>{% endif %}
+            {% if item.description or item.highlight_description or item.hero_description %}
+                <p>{{item.description | default: item.highlight_description | default: item.hero_description }}</p>
+            {% endif %}
+        </section>
+    </a>
+</div>

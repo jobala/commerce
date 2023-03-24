@@ -1,0 +1,283 @@
+.b-our-prices {
+	padding: @m_vertical-block 0;
+	text-align: center; // to align items in .b-our-prices__list
+	// and link above that
+
+	._mx_md-mobile({
+		padding: @m_vertical-block_mb 0;
+	});
+
+	.g-header {
+
+		hr {
+			margin-bottom: 0;
+		}
+	}
+
+	&__list {
+
+		._mx_inline(~'li');
+
+		> li {
+			width: 410px;
+
+			._mx_md-mobile({
+				width: 100%;
+			});
+
+			+ li {
+				margin-left: @m-col;
+
+				._mx_md-mobile({
+					margin-top: 40px;
+					margin-left: 0;
+				});
+			}
+		}
+
+		&__item {
+			@brd_w: 1px;
+
+			position: relative;
+			border: @brd_w solid @brd_c;
+
+			> .e-mark {
+				@h: 35px;
+				@lh-indemnity: 2px;
+
+				position: absolute;
+				top: 10px - @brd_w;
+				left: -(25px + @brd_w);
+				z-index: 5;
+
+				padding: 0 13.5px @lh-indemnity;
+
+				background-color: spin(@brand-warning, 6%);
+
+				color: @white;
+				font-size: @font-size-small;
+				line-height: @h - @lh-indemnity;
+				font-weight: 700;
+
+				._mx_md-mobile({
+					top: -20px;
+				});
+
+				&:before {
+					content: '';
+
+					position: absolute;
+					top: 100%;
+					left: 0;
+
+					width: 25px;
+					height: 10px;
+
+					._mx_sprite-all(-150px 0);
+				}
+			}
+
+			> .inner { // to hide & > .e-header and & > .e-price shadow
+				@p_horiz: 20px;
+
+				overflow: hidden;
+
+				> .e-header {
+					position: relative;
+					z-index: 1;
+
+					padding: 30px @p_horiz;
+
+					box-shadow: 0 0 8px fadeout(@black, 75%);
+
+					._mx_e-h3({
+						font-size: @font-size-h4;
+						margin: -3px 0 12px;
+					});
+
+					hr {
+						@w: 13px;
+						@m_horiz: 15px;
+
+						position: relative;
+
+						width: @w;
+						height: 12px;
+
+						margin: 0 auto 15px;
+
+						background-color: transparent;
+
+						._mx_sprite-all(-200px 0);
+
+						&:before,
+						&:after {
+							content: '';
+
+							position: absolute;
+							top: 0;
+
+							width: @w;
+							height: 12px;
+
+							._mx_sprite-all(-200px 0);
+						}
+
+						&:before {
+							left: -(@w + @m_horiz);
+						}
+
+						&:after {
+							right: -(@w + @m_horiz);
+						}
+					}
+
+					p {
+						margin: -7px 0 -6px;
+						font-size: @font-size-small;
+						line-height: 1.5;
+					}
+				}
+
+				> .e-price {
+					background-color: @brand-primary;
+					color: @white;
+
+					._mx_valign_table(@h: 100px);
+
+					._mx_md-mobile({
+						height: 80px;
+					});
+
+					.e-text {
+						font-weight: 700;
+					}
+
+					.e-cost {
+
+						._mx_inline(@valign: baseline);
+
+						> .e-currency {
+							margin: -3px 0 -4px;
+							font-size: @font-size-medium;
+							font-weight: 700;
+						}
+
+						> .e-number{
+							margin: -14px 0 -11px;
+							font-size: 5.2rem;
+							font-weight: 300;
+						}
+					}
+
+					.e-description {
+						margin: 5px 0 -3px;
+						font-size: @font-size-small;
+					}
+				}
+
+				> .e-list {
+					position: relative;
+					z-index: 1;
+
+					box-shadow: 0 0 8px fadeout(@black, 75%);
+
+					> li {
+						@h: 51px;
+						@brd_w: 1px;
+
+						font-size: @font-size-small;
+
+						._mx_valign_table(@h: @h);
+
+						&:nth-child(even) {
+							height: ( @h + (@brd_w * 2) );
+
+							border-top: @brd_w solid @brd_c;
+							border-bottom: @brd_w solid @brd_c;
+							padding: 13px @p_horiz;
+
+							background-color: @gray-lightest;
+						}
+					}
+				}
+			}
+
+			+ .btn {
+				width: @w_full-col * 3;
+				margin-top: 35px;
+
+				._mx_md-mobile({
+					width: 100%;
+					margin-top: 20px;
+				});
+			}
+		}
+	}
+
+	&__link {
+		@d: 26px;
+		@m_r-icon: 12px;
+		@m_r-icon_mb: 10px;
+
+		position: relative;
+
+		margin-top: 50px;
+		border-bottom: 0; // be careful if you want to delete this string
+		padding-left: @d + @m_r-icon;
+
+		font-size: @font-size-xs;
+		line-height: 26px;
+
+		&:extend(.link all);
+
+		._mx_md-mobile({
+			margin-top: 30px;
+			padding-left: 0;
+		});
+
+		&:hover {
+
+			&:before {
+				box-shadow: inset 0 0 5px fadeout(@black, 75%);
+			}
+
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+
+			._mx_md-mobile({
+				display: none;
+			});
+		}
+
+		&:before {
+			top: 0;
+			left: 0;
+
+			width: @d;
+			height: @d;
+
+			border-radius: 50%;
+
+			background-color: @white;
+			box-shadow: 0 0 5px fadeout(@black, 75%);
+		}
+
+		&:after {
+			@w: 12px;
+			@h: 12px;
+
+			top: (@d - @h)/2;
+			left: (@d - @w)/2;
+
+			width: @w;
+			height: @h;
+
+			._mx_sprite-all(-250px 0);
+		}
+	}
+}

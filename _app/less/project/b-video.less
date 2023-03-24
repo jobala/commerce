@@ -1,0 +1,88 @@
+.b-video {
+	position: relative;
+	height: 120px;
+	background-color: @brand-primary;
+	color: @white;
+
+	&:before {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		opacity: .2;
+
+		width: 100%;
+		height: 100%;
+
+		background: url('@{img}/b-video/bg.jpg') center ~'/' cover;
+	}
+
+	._mx_e-headings({
+		color: @white;
+	});
+
+	> .container {
+
+		._mx_valign_table(@w: @w-container);
+
+		._mx_md-mobile({
+			width: @w-container_mb;
+		});
+	}
+
+	.btn-play {
+		@d-icon: 55px;
+		@m_r-icon: 30px;
+
+		position: relative;
+
+		margin: 0 auto;
+		padding-left: @d-icon + @m_r-icon;
+		padding-bottom: 1px; // to align like in psd
+
+		color: @white;
+		font-size: @font-size-xl;
+		text-transform: uppercase;
+
+		transition: opacity .4s;
+
+		&:hover {
+			opacity: .85;
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+		}
+
+		&:before {
+			left: 0;
+
+			width: @d-icon;
+			height: @d-icon;
+
+			margin-top: -( round(@d-icon/2) - 1px ); // -1px to align like in psd
+			border-radius: 50%;
+
+			background-color: @white;
+		}
+
+		&:after {
+			@w: 13px;
+			@h: 17px;
+
+			left: round( ( (@d-icon - @w)/2 ) + 2px ); // +2px to align like in psd
+
+			width: @w;
+			height: @h;
+
+			margin-top: -( floor(@h/2) );
+
+			._mx_sprite-all(-350px 0);
+		}
+	}
+}

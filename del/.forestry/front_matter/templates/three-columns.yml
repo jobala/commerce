@@ -1,0 +1,262 @@
+---
+label: Three Column
+hide_body: true
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: case-study
+- name: name
+  label: Name
+  hidden: false
+  type: text
+- type: select
+  name: heading_tag
+  label: Heading Tag
+  description: Heading used for the title (if any)
+  hidden: false
+  required: true
+  default: h2
+  config:
+    source:
+      type: custom
+    options:
+    - h1
+    - h2
+    - h3
+    - h4
+    - h5
+    - h6
+- name: title
+  label: Title
+  hidden: false
+  type: textarea
+- type: select
+  name: background_color
+  label: Background Color
+  description: section`s background color
+  hidden: false
+  default: white
+  config:
+    source:
+      type: custom
+    options:
+    - white
+    - grey
+- type: select
+  name: container_type
+  label: Container Type
+  description: fluid container take the whole screen unlike regular ones.
+  hidden: false
+  default: regular
+  config:
+    source:
+      type: custom
+    options:
+    - regular
+    - fluid
+- type: field_group
+  name: column1
+  label: Column one
+  hidden: false
+  fields:
+  - type: select
+    name: heading_tag
+    label: Heading Tag
+    description: Heading used for the title (if any)
+    hidden: false
+    required: true
+    default: h2
+    config:
+      source:
+        type: custom
+      options:
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+  - name: title
+    label: Title
+    hidden: false
+    type: textarea
+  - name: content
+    label: Content
+    hidden: false
+    type: textarea
+  - name: image
+    label: image
+    hidden: false
+    type: file
+  - name: image_alt
+    label: Image Alt
+    hidden: false
+    type: text
+  - type: select
+    name: flex
+    label: Flex
+    description: Flex property. also useful for alignment (including vertical)
+    hidden: false
+    default: no-flex
+    config:
+      source:
+        type: custom
+      options:
+      - no-flex
+      - flex flex-row flex-center
+      - flex flex-column flex-center
+  - type: select
+    name: center
+    label: Text alignment
+    description: Might align text or elements center/left
+    hidden: false
+    default: text-left
+    config:
+      source:
+        type: custom
+      options:
+      - text-left
+      - text-center
+  - name: button
+    label: Button text
+    description: text of button of meeting.is/, button will not appear if empty
+    hidden: false
+    type: text
+- type: field_group
+  name: column2
+  label: Column two
+  hidden: false
+  fields:
+  - type: select
+    name: heading_tag
+    label: Heading Tag
+    description: Heading used for the title (if any)
+    hidden: false
+    required: true
+    default: h2
+    config:
+      source:
+        type: custom
+      options:
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+  - name: title
+    label: Title
+    hidden: false
+    type: textarea
+  - name: content
+    label: Content
+    hidden: false
+    type: textarea
+  - name: image
+    label: image
+    hidden: false
+    type: file
+  - name: image_alt
+    label: Image Alt
+    hidden: false
+    type: text
+  - type: select
+    name: flex
+    label: Flex
+    description: Flex property. also useful for alignment (including vertical)
+    hidden: false
+    default: no-flex
+    config:
+      source:
+        type: custom
+      options:
+      - no-flex
+      - flex flex-row flex-center
+      - flex flex-column flex-center
+  - type: select
+    name: center
+    label: Text alignment
+    description: Might align text or elements center/left
+    hidden: false
+    default: text-left
+    config:
+      source:
+        type: custom
+      options:
+      - text-left
+      - text-center
+  - name: button
+    label: Button text
+    description: text of button of meeting.is/, button will not appear if empty
+    hidden: false
+    type: text
+- type: field_group
+  name: column3
+  label: Column three
+  hidden: false
+  fields:
+  - type: select
+    name: heading_tag
+    label: Heading Tag
+    description: Heading used for the title (if any)
+    hidden: false
+    required: true
+    default: h2
+    config:
+      source:
+        type: custom
+      options:
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+  - name: title
+    label: Title
+    hidden: false
+    type: textarea
+  - name: content
+    label: Content
+    hidden: false
+    type: textarea
+  - name: image
+    label: image
+    hidden: false
+    type: file
+  - name: image_alt
+    label: Image Alt
+    hidden: false
+    type: text
+  - type: select
+    name: flex
+    label: Flex
+    description: Flex property. also useful for alignment (including vertical)
+    hidden: false
+    default: no-flex
+    config:
+      source:
+        type: custom
+      options:
+      - no-flex
+      - flex flex-row flex-center
+      - flex flex-column flex-center
+  - type: select
+    name: center
+    label: Text alignment
+    description: Might align text or elements center/left
+    hidden: false
+    default: text-left
+    config:
+      source:
+        type: custom
+      options:
+      - text-left
+      - text-center
+  - name: button
+    label: Button text
+    description: text of button of meeting.is/, button will not appear if empty
+    hidden: false
+    type: text

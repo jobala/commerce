@@ -1,0 +1,52 @@
+{% assign img_src = include.image | strip %}
+<style>
+{% if include.image and img_src != "" %}
+.highlight{
+background-image: url({{include.image}});
+background-color:#1e1c1d;
+}
+{% else %}
+.highlight{
+background:white;
+}
+.highlight p, .highlight h1, .highlight h3,
+.highlight p *, .highlight h1 *, .highlight h3 *{
+color:black;
+}
+{% endif %}
+
+.highlight{
+background-size:cover;
+padding-top:13vh;
+padding-bottom:10vh;
+}
+.highlight.half-size{
+background-size:cover;
+padding-top:7vh;
+padding-bottom:5vh;
+}
+@media (max-width:600px) {
+.highlight{
+    padding-top:7vh;
+    padding-bottom:5vh;
+}
+}
+</style>
+<div class="highlight {{include.class}} {% if include.image and img_src != '' %}dim{% endif %}">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="yellow-text tillium-web semibold">
+                    {{include.company}}
+                </p>
+                <div class="tillium-web semibold">{{include.title | markdownify}}</div>
+                {% if include.subtitle and include.paragraphs %}
+                    <p class="tillium-web light">
+                        {{include.subtitle}}
+                    </p>
+                    {{include.paragraphs | markdownify }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

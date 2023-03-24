@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg89"
+   version="1.1"
+   viewBox="0 0 416.25 585.732"
+   height="585.732"
+   width="416.25">
+  <metadata
+     id="metadata93">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <clipPath
+       id="clip-path">
+      <rect
+         stroke-width="1"
+         stroke="rgba(4,4,4,0.14)"
+         fill="none"
+         transform="translate(289.215 528.9) rotate(180)"
+         height="528.9"
+         width="289.215"
+         data-name="Rectangle 14"
+         id="Rectangle_14" />
+    </clipPath>
+    <clipPath
+       id="clip-path-2">
+      <path
+         stroke-width="1"
+         stroke="rgba(4,4,4,0.14)"
+         fill="none"
+         transform="translate(-2929.895 -616.978)"
+         d="M3518.729,821.276a156.454,156.454,0,0,0-9.251-117.722c-32.2-64.863-106.681-99.43-177.005-82.153a156.462,156.462,0,0,0-99.294,74.618c-20.624,36.131-58.362,58.424-99.709,63.03a229.861,229.861,0,0,0-62.64,16.187c-106.664,44.218-164.179,163.549-132.05,274.454,37.278,128.679,174.759,196.893,298.448,151.68a227.538,227.538,0,0,0,109.62-84.782c19.668-28.527,54.611-42.734,88.225-34.323a99.989,99.989,0,0,0,70.254-8.237c40.233-20.608,61.781-67.125,51.525-111.15a100.427,100.427,0,0,0-19.4-40.2A108.577,108.577,0,0,1,3518.729,821.276Z"
+         data-name="Path 6"
+         id="Path_6" />
+    </clipPath>
+  </defs>
+  <g
+     transform="matrix(0.966,0.259,-0.259,0.966,-2770.226,-1388.28)"
+     data-name="Group 29"
+     id="Group_29">
+    <g
+       clip-path="url(#clip-path)"
+       transform="translate(3167.371,588.559)"
+       data-name="Group 26"
+       id="Group_26">
+      <g
+         transform="translate(-348.511,41.706)"
+         data-name="Group 25"
+         id="Group_25">
+        <g
+           clip-path="url(#clip-path-2)"
+           data-name="Group 24"
+           id="Group_24">
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-246.136,-270.581)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 1"
+             id="Line_1" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-204.694,-251.326)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 2"
+             id="Line_2" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(375.506,18.247)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 3"
+             id="Line_3" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(406.589,32.688)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 4"
+             id="Line_4" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-308.301,-299.464)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 5"
+             id="Line_5" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-266.858,-280.209)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 6"
+             id="Line_6" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-163.251,-232.071)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 7"
+             id="Line_7" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(334.064,-1.009)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 8"
+             id="Line_8" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(396.228,27.874)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 9"
+             id="Line_9" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-121.808,-212.816)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 10"
+             id="Line_10" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(302.982,-15.45)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 11"
+             id="Line_11" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(354.785,8.619)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 12"
+             id="Line_12" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(64.685,-126.167)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 13"
+             id="Line_13" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(365.146,13.433)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 14"
+             id="Line_14" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-18.201,-164.678)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 15"
+             id="Line_15" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(147.571,-87.657)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 16"
+             id="Line_16" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-360.105,-323.533)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 17"
+             id="Line_17" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-349.744,-318.719)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 18"
+             id="Line_18" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-287.579,-289.836)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 19"
+             id="Line_19" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-256.497,-275.395)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 20"
+             id="Line_20" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-380.826,-333.161)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 21"
+             id="Line_21" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-370.465,-328.347)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 22"
+             id="Line_22" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-339.383,-313.905)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 23"
+             id="Line_23" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-318.662,-304.278)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 24"
+             id="Line_24" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-277.219,-285.023)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 25"
+             id="Line_25" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-235.776,-265.767)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 26"
+             id="Line_26" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(230.457,-49.147)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 27"
+             id="Line_27" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(385.867,23.06)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 28"
+             id="Line_28" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(189.014,-68.402)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 29"
+             id="Line_29" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(344.424,3.805)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 30"
+             id="Line_30" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-59.644,-183.933)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 31"
+             id="Line_31" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(323.703,-5.822)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 32"
+             id="Line_32" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(209.735,-58.774)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 33"
+             id="Line_33" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(313.342,-10.636)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 34"
+             id="Line_34" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(43.963,-135.795)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 35"
+             id="Line_35" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(292.621,-20.264)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 36"
+             id="Line_36" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-38.922,-174.305)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 37"
+             id="Line_37" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(126.849,-97.285)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 38"
+             id="Line_38" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(168.292,-78.029)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 39"
+             id="Line_39" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(251.178,-39.519)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 40"
+             id="Line_40" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(85.407,-116.54)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 41"
+             id="Line_41" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(2.521,-155.05)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 42"
+             id="Line_42" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-101.087,-203.188)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 43"
+             id="Line_43" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(23.242,-145.422)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 44"
+             id="Line_44" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-215.054,-256.14)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 45"
+             id="Line_45" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(107.227,-109.277)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 46"
+             id="Line_46" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-183.972,-241.698)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 47"
+             id="Line_47" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-142.529,-222.443)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 48"
+             id="Line_48" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(271.899,-29.891)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 49"
+             id="Line_49" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(220.096,-53.96)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 50"
+             id="Line_50" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(282.26,-25.078)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 51"
+             id="Line_51" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(137.21,-92.471)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 52"
+             id="Line_52" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(261.539,-34.705)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 53"
+             id="Line_53" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(75.046,-121.354)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 54"
+             id="Line_54" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(178.653,-73.215)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 55"
+             id="Line_55" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-173.611,-236.885)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 56"
+             id="Line_56" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(199.374,-63.588)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 57"
+             id="Line_57" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-80.365,-193.56)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 58"
+             id="Line_58" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-7.84,-159.864)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 59"
+             id="Line_59" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(240.817,-44.333)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 60"
+             id="Line_60" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-49.283,-179.119)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 61"
+             id="Line_61" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(157.932,-82.843)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 62"
+             id="Line_62" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(116.489,-102.098)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 63"
+             id="Line_63" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-28.562,-169.491)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 64"
+             id="Line_64" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(95.767,-111.726)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 65"
+             id="Line_65" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-194.333,-246.512)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 66"
+             id="Line_66" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(54.324,-130.981)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 67"
+             id="Line_67" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-111.447,-208.002)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 68"
+             id="Line_68" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-70.004,-188.747)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 69"
+             id="Line_69" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(12.881,-150.236)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 70"
+             id="Line_70" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-152.89,-227.257)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 71"
+             id="Line_71" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-132.169,-217.629)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 72"
+             id="Line_72" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(33.603,-140.609)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 73"
+             id="Line_73" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-329.022,-309.092)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 74"
+             id="Line_74" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-297.94,-294.65)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 75"
+             id="Line_75" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-225.415,-260.954)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 76"
+             id="Line_76" />
+          <line
+             stroke="rgba(4,4,4,0.14)"
+             transform="translate(-90.726,-198.374)"
+             style="fill:none;stroke-width:1;stroke-miterlimit:10;stroke:#66666f;stroke-opacity:0.94117647"
+             x2="0"
+             y1="0"
+             stroke-miterlimit="10"
+             y2="923.92401"
+             x1="429.27399"
+             data-name="Line 77"
+             id="Line_77" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

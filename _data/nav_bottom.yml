@@ -1,0 +1,11 @@
+- name: "Attributions"
+  type: "internal"
+  link: "/attributions/"
+
+- name: "Privacy Policy"
+  type: "internal"
+  link: "/privacy-policy/"
+
+- name: "Terms of Service"
+  type: "internal"
+  link: "/terms-of-service/"

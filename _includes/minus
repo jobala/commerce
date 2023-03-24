@@ -1,0 +1,19 @@
+<svg
+   width="{{include.width | default:'15px' }}"
+   height="{{include.height | default:'15px' }}"
+   viewBox="0 0 18.950506 19.006981"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-64.038619,-83.913799)">
+    <path
+       style="fill:#000000;stroke-width:0.352778"
+       d="m 73.189164,93.851618 -9.150545,-0.09873 v -1.213642 l 9.150545,-0.09874 h 1.411111 l 8.38885,-0.0226 v 1.363532 l -8.38885,0.07018 z"
+       id="path21" />
+  </g>
+</svg>

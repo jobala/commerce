@@ -1,0 +1,159 @@
+.b-testimonials {
+	padding: @m_vertical-block 0;
+
+	._mx_md-mobile({
+		padding: @m_vertical-block_mb 0;
+	});
+
+	&__list {
+		text-align: center;
+
+		&-wrapper {
+			@w-icon: 30px;
+			@m-icon: 30px;
+
+			position: relative;
+
+			width: (@w_full-col * 8) + @m-col;
+
+			margin: 0 auto -4px;
+			padding: 0 @m-col;
+
+			._mx_md-mobile({
+				width: 100%;
+			});
+
+			&:before,
+			&:after {
+				content: '';
+
+				position: absolute;
+
+				width: @w-icon;
+				height: 29px;
+
+				._mx_sprite();
+			}
+
+			&:before {
+				content: '';
+
+				top: -8px;
+				left: -(@w-icon + @m-icon);
+
+				background-position: -50px 0;
+
+				._mx_md-mobile({
+					left: -10px;
+				});
+			}
+
+			&:after {
+				content: '';
+
+				top: 10px;
+				right: -(@w-icon + @m-icon);
+
+				background-position: -100px 0;
+
+				._mx_md-mobile({
+					right: -10px;
+				});
+			}
+		}
+
+		> .e-list {
+
+			> li {
+
+				blockquote {
+					display: inline-block;
+
+					p {
+						margin: -9px auto;
+						font-size: @font-size-small;
+						line-height: 1.9;
+
+						._mx_md-mobile({
+							margin: 0;
+						});
+					}
+				}
+			}
+		}
+	}
+
+	&__nav {
+		margin-top: 50px;
+		text-align: center;
+
+		._mx_inline(~'li');
+
+		._mx_md-mobile({
+			margin-top: 30px;
+		});
+
+		> li {
+			@m_h-photo: 70px;
+
+			width: 120px;
+			opacity: .4;
+			cursor: pointer;
+
+			transition: opacity .4s;
+
+			._mx_md-mobile({
+				width: auto;
+			});
+
+			&.active {
+				opacity: 1;
+
+				> .e-photo {
+
+					> .e-img {
+						width: 70px;
+						height: @m_h-photo;
+					}
+				}
+			}
+
+			> .e-photo {
+				height: @m_h-photo;
+				font-size: 0;
+				line-height: @m_h-photo;
+
+				> .e-img {
+					display: inline-block;
+					vertical-align: middle;
+					border-radius: 50%;
+
+					transition-property: width, height;
+					transition-duration: .2s;
+
+					._mx_wrap-img(60px; 60px);
+				}
+			}
+
+			> .e-name {
+				margin: 8px 0 -3px;
+
+				color: @gray-dark;
+				font-size: @font-size-xxs;
+				font-weight: 700;
+
+				._mx_md-mobile({
+					display: none;
+				});
+			}
+
+			+ li {
+				margin-left: @m-col;
+
+				._mx_md-mobile({
+					margin-left: 20px;
+				});
+			}
+		}
+	}
+}

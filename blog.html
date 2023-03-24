@@ -1,0 +1,44 @@
+---
+layout: blog
+title: "Blog (old)"
+description: "Imagine this phone call between Bob, a very well off older gentleman, and Maude, a salesperson at a high-end travel agency: Bob: (click-click-click-click-click, ring, ring… ring, ring) Maude: Travel Deluxe, good morning! Bob: Hi there, I’m interested in around-the-world cruises for myself, my wife, our 4 kids, their spouses, and 12 grandkids. I’d like to..."
+body_class: "blog"
+published: false
+description: Get the latest news and blog posts from CrankWheel or browse our archives.
+---
+
+<div class="white-bcg">
+  <div class='row white-bcg'>
+    <div class="col l6 push-l3 s12">
+      <main class="blog-content" role="main">
+        {% for post in site.posts %}
+        <article class="">
+	  <div class="blog-meta">
+	    <a href="{{ site.author.link }}" class="post-author-format-type">
+	    </a>
+	  </div>
+	  <div class="entry-content-wrapper clearfix standard-content">
+	    <header class="entry-content-header">
+	      <h2 class="post-title entry-title" >
+	        <a href="{{ site.baseurl | append: post.url | replace: '//', '/' | replace: ':/', '://' }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}<span class="post-format-icon minor-meta"></span></a>
+	      </h2>
+	      <span class="post-meta-infos">
+	        <time class="date-container minor-meta updated" datetime="{{ post.date | date: '%Y-%m-%d' }}" >{{ post.date | date: '%B %d, %Y' }}</time>
+	        <span class=""> / </span>
+	        <span class="blog-author minor-meta">by <span class="entry-author-link" >{% if post.author %}{{ post.author }}{% else %}{{ site.author.name }}{% endif %}</span></span>
+	      </span>
+	    </header>
+	    <div class="entry-content" >
+	      {{post.excerpt}}
+	      <br>
+	      <a class="read-more" href="{{ site.baseurl | append: post.url | replace: '//', '/' | replace: ':/', '://' }}" rel="bookmark" title="{{ post.title }}">Read More &#8594;</a>
+	    </div>
+	  </div>
+        </article>
+        {% endfor %}
+        <!--end content-->
+      </main>
+    </div>
+    <!--end container-->
+  </div>
+</div>

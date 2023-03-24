@@ -1,0 +1,12 @@
+{% assign found = false %}
+{% for category in include.item.category %}
+{% if include.category contains category %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and include.category and include.category.size > 0 %}
+{% include tile-content.html item=include.item column_class=include.column_class show_date=include.show_date %}
+{% elsif include.category == empty or include.category.size == 0 or include.category == nil %}
+{% include tile-content.html item=include.item column_class=include.column_class show_date=include.show_date %}
+{% endif %}

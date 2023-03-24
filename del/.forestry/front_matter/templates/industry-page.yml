@@ -1,0 +1,124 @@
+---
+label: Industry page
+hide_body: true
+fields:
+- name: title
+  label: Title
+  hidden: false
+  type: text
+- name: description
+  label: Description
+  hidden: false
+  type: textarea
+  config:
+    max: 190
+- type: tag_list
+  name: category
+  label: Category
+  description: tag used to categorize content
+- type: file
+  label: Thumbnail
+  name: thumbnail
+- name: slug
+  label: Slug
+  hidden: false
+  type: text
+- name: pinned
+  label: Pinned
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear pinned an overview page. -1 will
+    show it as normal content.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: order
+  label: Order
+  hidden: false
+  type: number
+  default: -1
+  description: If number >= 0 is set. It will appear along the sorted content in the
+    overview page. -1 will show it as usual.
+  config:
+    required: false
+    min: -1
+    max: 99
+    step: 1
+- name: menu_label
+  label: Menu label
+  hidden: false
+  type: text
+- name: keywords
+  label: Keywords
+  hidden: false
+  type: text
+- name: highlight_title
+  label: Highlight title
+  hidden: false
+  type: text
+- name: highlight_description
+  label: Highlight description
+  hidden: false
+  type: textarea
+- name: hero_image
+  label: Hero image
+  hidden: false
+  type: file
+- name: main
+  label: Main
+  hidden: false
+  type: textarea
+- type: field_group_list
+  name: icons
+  label: Benefit & Icons
+  hidden: false
+  fields:
+  - type: file
+    name: image
+    label: Icon file
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Benefit
+    config:
+      required: true
+  config:
+    labelField: title
+- type: field_group_list
+  name: benefits
+  label: Benefits
+  hidden: false
+  fields:
+  - type: text
+    name: title
+    label: Benefit title
+    config:
+      required: true
+  - type: textarea
+    name: description
+    label: Benefit
+    config:
+      required: true
+  config:
+    labelField: title
+- type: field_group_list
+  name: features
+  label: Features
+  hidden: false
+  fields:
+  - type: text
+    name: title
+    label: Features title
+    config:
+      required: true
+  - type: textarea
+    name: description
+    label: Features
+    config:
+      required: true
+  config:
+    labelField: title

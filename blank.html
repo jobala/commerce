@@ -1,0 +1,282 @@
+<html>
+<head>
+<style>
+
+h1 {
+	margin: 4em;
+	text-align: center;
+	font-size: 2vh;
+	font-family: 'Lato', sans-serif;
+	color: rgba(0, 0, 0, .87);
+	-webkit-font-smoothing: antialiased;
+}
+
+.hide {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h1 id="warning-no-extension" class="hide">
+	In order to use CrankWheel, please <a id="extension-link" href="https://chrome.google.com/webstore/detail/crankwheel-screen-sharing/dooinopjfnhlmmdkdepajfipfhlcmjgp">install this Chrome extension</a> first.
+</h1>
+
+<script>
+var hasChromeOrChromium = (navigator.userAgent.indexOf("Chrome/") != -1 || navigator.userAgent.indexOf("Chromium/") != -1);
+var hasFirefox = navigator.userAgent.indexOf("Firefox/") != -1;
+var hasEdge = navigator.userAgent.indexOf("Edg/") != -1;
+
+// Copied / adapted from firefox.js
+// This implements the runtime.connect and runtime.sendMessage functions,
+// and a dummy runtime.lastError property, in terms of what we are able
+// to do on Firefox, i.e. postMessage between a webext page and a
+// content script running on the same page.
+
+let ffNextCookie = 1;  // Not 0, so it's always "truthy"
+
+const ffCallbacks = new Map();
+const ffPorts = new Map();
+
+function ffContentScriptMessage(cmd, msg, optCallback) {
+  let csMsg = {cmd: "toContentScript", sub_cmd: cmd, msg: msg};
+  if (optCallback) {
+    let callbackCookie = ffNextCookie++;
+    csMsg.callback_cookie = callbackCookie;
+    ffCallbacks.set(callbackCookie, optCallback);
+  }
+  window.postMessage(csMsg, "*");
+}
+
+function ffRuntimeSendMessage(_ignoredExtensionId, msg, neverSetOptions, optCallback) {
+  if (neverSetOptions) console.error("Options should always be null or unset");
+  ffContentScriptMessage("ffSendMessage", msg, optCallback);
+}
+
+function ffRuntimeConnect(_ignoredExtensionId, options) {
+  let port = {
+    _portId: -1,
+    _bufferedMessages: [],
+
+    postMessage: function (msg, _ignoredCallback) {
+      if (this._portId != -1) {
+        ffContentScriptMessage("postMessagePort", {port_id: this._portId, msg: msg});
+      } else {
+        this._bufferedMessages.push(msg);
+      }
+    },
+
+    _finishConnecting: function (portId) {
+      this._portId = portId;
+      let self = this;  // 'this' in the loop is the window object *shrug*
+      this._bufferedMessages.forEach(function (msg) {
+        self.postMessage(msg);
+      });
+      this._bufferedMessages = [];
+    },
+
+    disconnect: function () {
+      if (this._portId != -1) {
+        ffPorts.delete(this._portId);
+        ffContentScriptMessage("disconnectPort", this._portId);
+      }
+    },
+
+    onMessage: {
+      _listeners: [],
+
+      addListener: function (listener) {
+        this._listeners.push(listener);
+      },
+
+      dispatch: function (msg) {
+        this._listeners.forEach(function(listener) {
+          listener(msg);
+        });
+      }
+    }
+  };
+
+  ffContentScriptMessage("ffRuntimeConnect", options, function (portId) {
+    ffPorts.set(portId, port);
+    port._finishConnecting(portId);
+  });
+
+  return port;
+}
+
+window.addEventListener('message', function (msg) {
+  if (msg.origin == document.location.origin && msg.data && msg.data.cmd && msg.data.cmd == "fromContentScript") {
+    let callbackCookie = msg.data.callback_cookie;
+    if (callbackCookie) {
+      let callback = ffCallbacks.get(callbackCookie);
+      ffCallbacks.delete(callbackCookie);
+      callback(msg.data.msg);
+    } else if (msg.data.sub_cmd == "ffPortOnMessage") {
+      let port = ffPorts.get(msg.data.port_id);
+      if (port) {
+        port.onMessage.dispatch(msg.data.msg);
+      }
+    }
+  }
+});
+
+let ffChromeRuntime = {
+  lastError: null,
+  sendMessage: ffRuntimeSendMessage,
+  connect: ffRuntimeConnect
+};
+
+
+// Copied / adapted from ext_port.js
+var EXTENSION_IDS = [
+  'dbjdpholdphlpnddfailgjbhdlccheld',  // Joi's dev ext on VirtualBox
+  'mlcbdphplkignmjbpekpffnokooifiln',  // Joi's dev ext on Mac
+  'kgfglipoaioblakikdidoecfhgibgiga',  // Joi's MV2 dev ext on Mac
+  'klbhnajndhaoadcnjhodkdplkcfehiia',  // Staging extension Chrome Web Store
+  'gebjopojipeanednoamlckcdldamjecb',  // Staging extension Edge Web Store
+  'dooinopjfnhlmmdkdepajfipfhlcmjgp',  // Production extension Chrome Web Store
+  'bjpnbepckcncaideamdakikaaofkjmab',  // Production extension Edge Web Store
+  'emhfnoelnchcaemjmagagkfednmilfgh',  // BETA extension Chrome Web Store
+];
+
+var epOverrideExtensionId = localStorage.getItem('cwOverrideExtensionId');
+if (epOverrideExtensionId) {
+  EXTENSION_IDS.unshift(epOverrideExtensionId);
+}
+
+var epExtensionIdToUse = null;  // Null indicates unfigured, -1 indicates no extension
+var epPort = null;
+var epPopupCookie = "" + Math.floor((Math.random() * 2000000000) + 1);
+var epExtensionVersion = null;
+
+window.realChromeRuntime = (window.chrome && window.chrome.runtime) ? window.chrome.runtime : null;
+let epChromeRuntime = window.realChromeRuntime;
+
+// This is used only on non-Chrome browsers (Firefox only for now).
+function epNonChromeFigureExtensionOrigin(callback) {
+  function handleLoaded() {
+    let divs = $('.cw-extension-origin');
+    if (divs.length > 0) {
+      let attributes = divs[0].attributes;
+      epChromeRuntime = ffChromeRuntime;
+      callback(attributes["data-cw-extension-origin"].value, attributes["data-cw-extension-version"].value);
+    } else {
+      callback(-1, "0.0.0.0");
+    }
+  }
+  $(document).ready(function () { setTimeout(handleLoaded, 50); });
+}
+
+function epFigureExtensionId(listOfIds, callback) {
+  if (epExtensionIdToUse) {
+    // Already set
+    callback(epExtensionIdToUse);
+    return;
+  }
+
+  if (!realChromeRuntime) {
+    // Firefox or other non-Chromium
+    epNonChromeFigureExtensionOrigin(function (origin, version) {
+      epExtensionIdToUse = origin;
+      epExtensionVersion = version;
+      callback(epExtensionIdToUse);
+    });
+    return;
+  }
+
+  if (listOfIds.length > 0) {
+    var currentId = listOfIds[0];
+    realChromeRuntime.sendMessage(currentId, {cmd: 'extensionCheck'}, null, function (res, version) {
+      if (!res) {
+        void realChromeRuntime.lastError;  // avoid error in console by evaluating this
+        epFigureExtensionId(listOfIds.slice(1), callback);
+      } else {
+        epExtensionVersion = res.version;
+        callback(currentId);
+      }
+    });
+  } else {
+    callback(null);
+  }
+}
+
+function epIsInstalled(callback) {
+  epFigureExtensionId(EXTENSION_IDS, function (id) {
+    if (id && id != -1) {
+      epExtensionIdToUse = id;
+      if (epExtensionVersion) {
+        // This happens in the non-Chromium case, the version is set as a data attribute.
+        callback(true, epExtensionVersion);
+      } else {
+        epChromeRuntime.sendMessage(epExtensionIdToUse, {cmd: 'extensionCheck'}, null, function (res, version) {
+          if (!res) {
+            void epChromeRuntime.lastError;  // avoid error in console by evaluating this
+            callback(false, '0.0.0.0');
+          } else {
+            epExtensionVersion = res.version;
+            callback(true, res.version);
+          }
+        });
+      }
+    } else {
+      epExtensionIdToUse = -1;
+      callback(false);
+    }
+  });
+}
+
+epIsInstalled(function (isInstalled) {
+	if (isInstalled) {
+		function getExtraQueryParams(url) {
+			var extraQueryParams;
+			var extraQueryParamsPrefix = ":extraparams:";
+			var extraQueryParamsIndex = url.indexOf(extraQueryParamsPrefix);
+			if (-1 != extraQueryParamsIndex) {
+				extraQueryParams = url.substring(extraQueryParamsIndex + extraQueryParamsPrefix.length);
+
+				var endExtraParamsIndex = extraQueryParams.indexOf('#');
+				if (-1 != endExtraParamsIndex) {
+				extraQueryParams = extraQueryParams.substring(0, endExtraParamsIndex);
+				}
+			}
+			return extraQueryParams;
+		}
+
+		var hash = document.location.hash && (document.location.hash.startsWith("#crankwheel") || document.location.hash.startsWith('#cwmagic')) ? document.location.hash : null;
+		var shouldShowPopup = false;
+		var shouldCloseThisTab = false;
+		if (hash && hash.startsWith('#crankwheelmagicshowui:mainandclose')) {
+			shouldShowPopup = true;
+			shouldCloseThisTab = true;
+		} else if (hash && hash.startsWith('#crankwheelmagicshowui:main')) {
+			shouldShowPopup = true;
+		} else if (hash && hash.startsWith('#cwmagicauthtoken:andclose')) {
+			shouldShowPopup = true;
+			shouldCloseThisTab = true;
+		}
+
+		epChromeRuntime.sendMessage(epExtensionIdToUse,
+			{
+				cmd: 'showPopup',
+				shouldCloseCurrentTab: shouldCloseThisTab,
+				extraQueryParams: getExtraQueryParams(hash)
+			});
+	} else {
+		document.getElementById('warning-no-extension').classList = '';
+		if (!hasChromeOrChromium && hasFirefox) {
+			document.getElementById('extension-link').setAttribute('href', 'https://crankwheel.com/ff_beta/crankwheel_ff_beta.xpi');
+		} else if (hasEdge) {
+			document.getElementById('extension-link').setAttribute('href', 'https://microsoftedge.microsoft.com/addons/detail/crankwheel-screen-sharing/bjpnbepckcncaideamdakikaaofkjmab');
+		}
+	}
+});
+
+</script>
+</body>
+</html>
+

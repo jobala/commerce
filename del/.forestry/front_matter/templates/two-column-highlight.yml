@@ -1,0 +1,52 @@
+---
+label: Two Column Hero section
+hide_body: true
+fields:
+- name: layout
+  label: Layout
+  hidden: true
+  type: text
+  default: case-study
+- name: name
+  label: Name
+  hidden: false
+  type: text
+- name: company
+  label: Company
+  hidden: false
+  type: text
+- name: hero_title
+  label: Title
+  hidden: false
+  type: textarea
+- name: subtitle
+  label: Subtitle
+  hidden: false
+  type: textarea
+- name: hero_description
+  label: Description
+  hidden: false
+  type: textarea
+- type: select
+  name: hero_background_color
+  label: Hero Background Color
+  hidden: false
+  default: white
+  config:
+    source:
+      type: custom
+    options:
+    - white
+    - grey
+- name: hero_image
+  label: Image
+  hidden: false
+  type: file
+- name: button_text
+  label: Button text
+  hidden: false
+  type: text
+- name: button_url
+  label: Button Url
+  hidden: false
+  type: text

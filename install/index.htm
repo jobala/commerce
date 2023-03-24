@@ -1,0 +1,201 @@
+---
+layout: raw
+title: "Install Screen Sharing extension"
+description: "CrankWheel Screen Sharing.
+Simplest way to share your screen.
+Enterprise features: White label, audit log and more."
+---
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Install screen sharing extension</title>
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dooinopjfnhlmmdkdepajfipfhlcmjgp">
+  <link rel="stylesheet" href="css/dashboard_app.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/images/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/images/fav/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/images/fav/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/images/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/images/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/images/fav/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/images/fav/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/images/fav/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/images/fav/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/static/images/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/images/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/fav/favicon-16x16.png">
+  <link rel="manifest" href="/static/images/fav/manifest.json">
+  <link rel="icon" type="image/png" href="cwicon.png">
+  <script type="text/javascript" src="{{ site.baseurl | append: '/static/js/jquery/jqueryc1d8.js?ver=1.11.3' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+  <script type="text/javascript" src="{{ site.baseurl | append: '/static/js/jquery/jquery-migrate.min1576.js?ver=1.2.1' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+</head>
+<body>
+<main>
+	<div id="extension-based-install" class="hero show">
+		<h1>Just one last thing!</h1>
+		<h5>Your last step is to install the screen sharing extension in your browser. It only takes a few seconds.</h5>
+		<h5>Click <strong class="add-to-browser-text">Add to Chrome</strong> below, then again on the next page, then confirm installation.</h5>
+		<div class="button-group">
+			<a id="a-install" class="button primary large add-to-browser-text" href="https://chrome.google.com/webstore/detail/dooinopjfnhlmmdkdepajfipfhlcmjgp">Add to Chrome</a>
+		</div>
+		<br/>
+		<h6 align="center">If you prefer to use our pure-web edition with no install, <a href="https://meeting.is/ss">click here</a>.</h6>
+	</div>
+
+	<div id="extension-already-installed" class="hero show hide">
+		<h1>You're all set!</h1>
+		<h5>You already have CrankWheel installed.</h5>
+		<h5>Click below to continue to your dashboard, where you can start screen sharing.</h5>
+		<div class="button-group">
+			<a class="button primary large add-to-browser-text" href="https://meeting.is/ss">Go to dashboard</a>
+		</div>
+	</div>
+
+	<div id="pure-web-app" class="hero show hide">
+		<h1>You're all set!</h1>
+		<h5>For your browser, CrankWheel is a pure web application, no need to install anything.</h5>
+		<h5>Click below to continue to your dashboard, where you can start screen sharing.</h5>
+		<div class="button-group">
+			<a class="button primary large" href="https://meeting.is/ss">Go to dashboard</a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom-base.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+	<script type="text/javascript" src="{{ site.baseurl | append: '/static/js/custom.js' | replace: '//', '/' | replace: ':/', '://' }}"></script>
+
+<script>
+var hasChromeOrChromium = (navigator.userAgent.indexOf("Chrome/") != -1 || navigator.userAgent.indexOf("Chromium/") != -1);
+
+function updateLinkAndButtonText() {
+	if (hasChromeOrChromium && navigator.userAgent.indexOf("Edg/") != -1) {
+		document.getElementById('a-install').setAttribute(
+			'href',
+			'https://microsoftedge.microsoft.com/addons/detail/crankwheel-screen-sharing/bjpnbepckcncaideamdakikaaofkjmab');
+		var elements = document.getElementsByClassName('add-to-browser-text');
+		for (var i = 0; i < elements.length; ++i) {
+			elements[i].innerHTML = 'Add to Edge';
+		}
+	}
+}
+
+var EXTENSION_IDS = [
+	'dbjdpholdphlpnddfailgjbhdlccheld',  // JT dev ext on VirtualBox
+  'mlcbdphplkignmjbpekpffnokooifiln',  // JT dev ext on Mac
+  'kgfglipoaioblakikdidoecfhgibgiga',  // JT MV2 dev ext on Mac
+  'klbhnajndhaoadcnjhodkdplkcfehiia',  // Staging extension Chrome Web Store
+  'gebjopojipeanednoamlckcdldamjecb',  // Staging extension Edge Web Store
+  'dooinopjfnhlmmdkdepajfipfhlcmjgp',  // Production extension Chrome Web Store
+  'bjpnbepckcncaideamdakikaaofkjmab',  // Production extension Edge Web Store
+  'emhfnoelnchcaemjmagagkfednmilfgh',  // BETA extension Chrome Web Store
+];
+
+var epOverrideExtensionId = localStorage.getItem('cwOverrideExtensionId');
+if (epOverrideExtensionId) {
+  EXTENSION_IDS.unshift(epOverrideExtensionId);
+}
+
+var epExtensionIdToUse = null;  // Null indicates unfigured, -1 indicates no extension
+var epPort = null;
+var epExtensionVersion = null;
+window.realChromeRuntime = (window.chrome && window.chrome.runtime) ? window.chrome.runtime : null;
+
+function epFigureExtensionId(listOfIds, callback) {
+  if (!realChromeRuntime) {
+    // Firefox or other non-Chromium
+    epExtensionIdToUse = -1;
+    callback(epExtensionIdToUse);
+    return;
+  }
+
+  if (epExtensionIdToUse) {
+    // Already set
+    callback(epExtensionIdToUse);
+    return;
+  }
+
+  if (listOfIds.length > 0) {
+    var currentId = listOfIds[0];
+    realChromeRuntime.sendMessage(currentId, {cmd: 'extensionCheck'}, null, function (res, version) {
+      if (!res) {
+        void realChromeRuntime.lastError;  // avoid error in console by evaluating this
+        epFigureExtensionId(listOfIds.slice(1), callback);
+      } else {
+        epExtensionVersion = res.version;
+        callback(currentId);
+      }
+    });
+  } else {
+    callback(null);
+  }
+}
+
+function epIsInstalled(callback) {
+  epFigureExtensionId(EXTENSION_IDS, function (id) {
+    if (id && id != -1) {
+      epExtensionIdToUse = id;
+      realChromeRuntime.sendMessage(epExtensionIdToUse, {cmd: 'extensionCheck'}, null, function (res, version) {
+        if (!res) {
+          void realChromeRuntime.lastError;  // avoid error in console by evaluating this
+          callback(false, '0.0.0.0');
+        } else {
+          epExtensionVersion = res.version;
+          callback(true, res.version);
+        }
+      });
+    } else {
+      epExtensionIdToUse = -1;
+      callback(false);
+    }
+  });
+}
+
+updateLinkAndButtonText();
+
+epIsInstalled(function (isInstalled) {
+	if (isInstalled) {
+		document.getElementById('extension-based-install').classList.add('hide');
+		document.getElementById('extension-already-installed').classList.remove('hide');
+
+		function getExtraQueryParams(url) {
+			var extraQueryParams;
+			var extraQueryParamsPrefix = ":extraparams:";
+			var extraQueryParamsIndex = url.indexOf(extraQueryParamsPrefix);
+			if (-1 != extraQueryParamsIndex) {
+				extraQueryParams = url.substring(extraQueryParamsIndex + extraQueryParamsPrefix.length);
+
+				var endExtraParamsIndex = extraQueryParams.indexOf('#');
+				if (-1 != endExtraParamsIndex) {
+				extraQueryParams = extraQueryParams.substring(0, endExtraParamsIndex);
+				}
+			}
+			return extraQueryParams;
+		}
+
+		var hash = document.location.hash && document.location.hash.startsWith("#crankwheel") ? document.location.hash : null;
+		var shouldShowPopup = false;
+		var shouldCloseThisTab = false;
+        if (hash && hash.startsWith('#crankwheelmagicshowui:mainandclose')) {
+			shouldShowPopup = true;
+			shouldCloseThisTab = true;
+		} else if (hash && hash.startsWith('#crankwheelmagicshowui:main')) {
+			shouldShowPopup = true;
+		}
+
+		if (shouldShowPopup) {
+			realChromeRuntime.sendMessage(epExtensionIdToUse, {
+				cmd: 'showPopup',
+				shouldCloseCurrentTab: shouldCloseThisTab,
+				extraQueryParams: getExtraQueryParams(hash)
+			});
+		}
+	} else {
+		if (!hasChromeOrChromium && (navigator.userAgent.indexOf("Firefox/") != -1 || navigator.userAgent.indexOf("Safari/") != -1)) {
+			document.getElementById('extension-based-install').classList.add('hide');
+			document.getElementById('pure-web-app').classList.remove('hide');
+		}
+	}
+});
+
+</script>
+</main>
+</body>

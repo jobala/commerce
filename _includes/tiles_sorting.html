@@ -1,0 +1,27 @@
+{% assign filter_nil = "item." | append: include.prop | append: " != nil" %}
+{% assign filter_empty = "item." | append: include.prop | append: " != empty" %}
+{% assign filter_minusone = "item." | append: include.prop | append: " != -1" %}
+{% assign filter_minusone_text = "item." | append: include.prop | append: " != '-1'" %}
+{% assign list = include.list | where_exp: "item", filter_nil | where_exp: "item", filter_empty | where_exp: "item", filter_minusone_text | where_exp: "item", filter_minusone %}
+{% assign shown = "" | split: ',' %}
+{% for i in ( 1 .. list.size ) %}
+{% assign last_item = false %}
+{% assign last_number = 100 %}
+{% assign j_limit = list.size | minus: 1 %}
+{% for j in ( 0 .. j_limit ) %}
+{% unless shown contains j %}
+{% assign floored = list[j][include.prop] | floor %}
+{% if floored >= 0 and floored <= last_number %}
+{% assign last_number = floored %}
+{% assign last_item = j %}
+{% endif %}
+{% endunless %}
+{% endfor %}
+
+{% unless item.top_menu == false %}
+{% assign current_item = list[last_item] %}
+{% include tile.html item=current_item column_class=include.column_class category=include.category show_date=false %}
+{% endunless %}
+{% assign shown = shown | push: last_item %}
+
+{% endfor %}

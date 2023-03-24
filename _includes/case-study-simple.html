@@ -1,0 +1,23 @@
+<div class="col s12 {% if include.testimonial != true %}{{include.flex}} {{include.center}}{% endif %} m8 offset-m2">
+    {% if include.title %}
+    <div class="text-center">
+      <{{ include.heading_tag | default: "h2" }}><strong>{{ include.title }}</strong></{{ include.heading_tag | default: "h2" }}>
+    </div>
+    {% endif %}
+
+    {% assign img_src = include.image | strip %}
+    {% if include.image and img_src != "" %}
+    <img src="{{include.image}}" alt="{{include.image_alt}}" {% if include.image_max_width %}style="max-width: {{include.image_max_width}};"{% endif %}>
+    {% endif %}
+
+    {{ include.content | markdownify }}
+
+    {% assign button_text = include.button | strip %}
+
+    {% if button_text != "" %}
+    <div class="buttonblock">
+      <a href="https://meeting.is/ss/showu/demo/default#crankwheel-com-showu-launch-button" class="btn-large primary">{{include.button }}</a>
+    </div>
+    {% endif %}
+
+  </div>
